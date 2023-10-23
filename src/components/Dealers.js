@@ -1,9 +1,13 @@
 import React from "react";
 import { useDealers } from "../contexts/dealersContext";
 import Dealer from "./Dealer";
+import Loading from "./Loading";
 
 export default function Dealers() {
   const { dealers, isLoading } = useDealers();
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <div
       id="dealers"
