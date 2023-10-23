@@ -41,12 +41,16 @@
       "id": 1,
       "brand": "Toyota",
       "model": "Camry",
-      "year": 2022,
       "mileageLeft": 45000,
       "type": "Sedan",
       "price": 25000,
       "sellercompany": "Auto World",
-      "images": ["/images/camry.jpg", "/images/camry.jpg", "/images/camry.jpg", "/images/camry.jpg"],
+      "images": [
+        "/images/camry.jpg",
+        "/images/camry.jpg",
+        "/images/camry.jpg",
+        "/images/camry.jpg"
+      ],
       "color": "Silver",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -55,12 +59,16 @@
       "id": 2,
       "brand": "Honda",
       "model": "CR-V",
-      "year": 2023,
       "mileageLeft": 32000,
       "type": "SUV",
       "price": 28000,
       "sellercompany": "Motor Masters",
-      "images": ["/images/crv.jpg", "/images/crv.jpg", "/images/crv.jpg", "/images/crv.jpg"],
+      "images": [
+        "/images/crv.jpg",
+        "/images/crv.jpg",
+        "/images/crv.jpg",
+        "/images/crv.jpg"
+      ],
       "color": "Blue",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -69,12 +77,16 @@
       "id": 3,
       "brand": "Toyota",
       "model": "Tazz",
-      "year": 2020,
       "mileageLeft": 25000,
       "type": "Sedan",
       "price": 35000,
       "sellercompany": "Cars Central",
-      "images": ["/images/tazz.jpg", "/images/tazz.jpg", "/images/tazz.jpg", "/images/tazz.jpg"],
+      "images": [
+        "/images/tazz.jpg",
+        "/images/tazz.jpg",
+        "/images/tazz.jpg",
+        "/images/tazz.jpg"
+      ],
       "color": "Red",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -83,12 +95,16 @@
       "id": 4,
       "brand": "Nissan",
       "model": "Altima",
-      "year": 2021,
       "mileageLeft": 40000,
       "type": "Sedan",
       "price": 22000,
       "sellercompany": "Nissan Dealership",
-      "images": ["/images/altima.jpg", "/images/altima.jpg", "/images/altima.jpg", "/images/altima.jpg"],
+      "images": [
+        "/images/altima.jpg",
+        "/images/altima.jpg",
+        "/images/altima.jpg",
+        "/images/altima.jpg"
+      ],
       "color": "Black",
       "driveMode": "Manual",
       "fuelType": "Petrol"
@@ -97,12 +113,16 @@
       "id": 5,
       "brand": "Chevrolet",
       "model": "Equinox",
-      "year": 2022,
       "mileageLeft": 28000,
       "type": "SUV",
       "price": 27000,
       "sellercompany": "Auto Sales Express",
-      "images": ["/images/equinox.jpg", "/images/equinox.jpg", "/images/equinox.jpg", "/images/equinox.jpg"],
+      "images": [
+        "/images/equinox.jpg",
+        "/images/equinox.jpg",
+        "/images/equinox.jpg",
+        "/images/equinox.jpg"
+      ],
       "color": "White",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -111,12 +131,16 @@
       "id": 6,
       "brand": "Volkswagen",
       "model": "Jetta",
-      "year": 2021,
       "mileageLeft": 38000,
       "type": "Sedan",
       "price": 23000,
       "sellercompany": "VW Dealers",
-      "images": ["/images/jetta.jpg", "/images/jetta.jpg", "/images/jetta.jpg", "/images/jetta.jpg"],
+      "images": [
+        "/images/jetta.jpg",
+        "/images/jetta.jpg",
+        "/images/jetta.jpg",
+        "/images/jetta.jpg"
+      ],
       "color": "Gray",
       "driveMode": "Manual",
       "fuelType": "Petrol"
@@ -125,12 +149,16 @@
       "id": 7,
       "brand": "Jeep",
       "model": "Grand Cherokee",
-      "year": 2022,
       "mileageLeft": 34000,
       "type": "SUV",
       "price": 32000,
       "sellercompany": "Jeep Store",
-      "images": ["/images/cherokee.avif", "/images/cherokee.avif", "/images/cherokee.avif", "/images/cherokee.avif"],
+      "images": [
+        "/images/cherokee.avif",
+        "/images/cherokee.avif",
+        "/images/cherokee.avif",
+        "/images/cherokee.avif"
+      ],
       "color": "Green",
       "driveMode": "Automatic",
       "fuelType": "Diesel"
@@ -139,12 +167,16 @@
       "id": 8,
       "brand": "Hyundai",
       "model": "Santa Fe",
-      "year": 2021,
       "mileageLeft": 26000,
       "type": "SUV",
       "price": 29000,
       "sellercompany": "Hyundai Dealership",
-      "images": ["/images/santa.webp", "/images/santa.webp", "/images/santa.webp", "/images/santa.webp"],
+      "images": [
+        "/images/santa.webp",
+        "/images/santa.webp",
+        "/images/santa.webp",
+        "/images/santa.webp"
+      ],
       "color": "Blue",
       "driveMode": "Automatic",
       "fuelType": "Diesel"
@@ -153,12 +185,16 @@
       "id": 9,
       "brand": "BMW",
       "model": "3 Series",
-      "year": 2023,
       "mileageLeft": 22000,
       "type": "Sedan",
       "price": 45000,
       "sellercompany": "BMW Autohaus",
-      "images": ["/images/series.webp", "/images/series.webp", "/images/series.webp", "/images/series.webp"],
+      "images": [
+        "/images/series.webp",
+        "/images/series.webp",
+        "/images/series.webp",
+        "/images/series.webp"
+      ],
       "color": "Black",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -167,12 +203,16 @@
       "id": 10,
       "brand": "Audi",
       "model": "Q5",
-      "year": 2022,
       "mileageLeft": 32000,
       "type": "SUV",
       "price": 48000,
       "sellercompany": "Audi Dealership",
-      "images": ["/images/q5.webp", "/images/q5.webp", "/images/seriq5es.webp", "/images/q5.webp"],
+      "images": [
+        "/images/q5.webp",
+        "/images/q5.webp",
+        "/images/seriq5es.webp",
+        "/images/q5.webp"
+      ],
       "color": "Silver",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -181,12 +221,16 @@
       "id": 11,
       "brand": "Lexus",
       "model": "RX",
-      "year": 2020,
       "mileageLeft": 25000,
       "type": "SUV",
       "price": 38000,
       "sellercompany": "Lexus Auto Group",
-      "images": ["/images/lexus.jpg", "/images/lexus.jpg", "/images/lexus.jpg", "/images/lexus.jpg"],
+      "images": [
+        "/images/lexus.jpg",
+        "/images/lexus.jpg",
+        "/images/lexus.jpg",
+        "/images/lexus.jpg"
+      ],
       "color": "White",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -195,12 +239,16 @@
       "id": 12,
       "brand": "Mercedes-Benz",
       "model": "C-Class",
-      "year": 2022,
       "mileageLeft": 29000,
       "type": "Sedan",
       "price": 55000,
       "sellercompany": "Mercedes Dealers",
-      "images": ["/images/cclass.jpeg", "/images/cclass.jpeg","/images/cclass.jpeg","/images/cclass.jpeg"],
+      "images": [
+        "/images/cclass.jpeg",
+        "/images/cclass.jpeg",
+        "/images/cclass.jpeg",
+        "/images/cclass.jpeg"
+      ],
       "color": "Black",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -209,12 +257,16 @@
       "id": 13,
       "brand": "GMC",
       "model": "Sierra",
-      "year": 2021,
       "mileageLeft": 23000,
       "type": "Truck",
       "price": 42000,
       "sellercompany": "GMC Dealership",
-      "images": ["/images/gmc.jpg", "/images/gmc.jpg", "/images/gmc.jpg", "/images/gmc.jpg"],
+      "images": [
+        "/images/gmc.jpg",
+        "/images/gmc.jpg",
+        "/images/gmc.jpg",
+        "/images/gmc.jpg"
+      ],
       "color": "Red",
       "driveMode": "Automatic",
       "fuelType": "Diesel"
@@ -223,12 +275,16 @@
       "id": 14,
       "brand": "Subaru",
       "model": "Outback",
-      "year": 2022,
       "mileageLeft": 36000,
       "type": "SUV",
       "price": 26000,
       "sellercompany": "Subaru Store",
-      "images": ["/images/subaru.jpg", "/images/subaru.jpg", "/images/subaru.jpg", "/images/subaru.jpg"],
+      "images": [
+        "/images/subaru.jpg",
+        "/images/subaru.jpg",
+        "/images/subaru.jpg",
+        "/images/subaru.jpg"
+      ],
       "color": "Blue",
       "driveMode": "Manual",
       "fuelType": "Petrol"
@@ -237,12 +293,16 @@
       "id": 15,
       "brand": "Kia",
       "model": "Sportage",
-      "year": 2021,
       "mileageLeft": 30000,
       "type": "SUV",
       "price": 23000,
       "sellercompany": "Kia Dealership",
-      "images": ["/images/sportage.jpg", "/images/sportage.jpg","/images/sportage.jpg", "/images/sportage.jpg"],
+      "images": [
+        "/images/sportage.jpg",
+        "/images/sportage.jpg",
+        "/images/sportage.jpg",
+        "/images/sportage.jpg"
+      ],
       "color": "Gray",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -251,12 +311,16 @@
       "id": 16,
       "brand": "Volvo",
       "model": "XC60",
-      "year": 2020,
       "mileageLeft": 27000,
       "type": "SUV",
       "price": 34000,
       "sellercompany": "Volvo Dealers",
-      "images": ["/images/x60.webp", "/images/x60.webp", "/images/x60.webp", "/images/x60.webp"],
+      "images": [
+        "/images/x60.webp",
+        "/images/x60.webp",
+        "/images/x60.webp",
+        "/images/x60.webp"
+      ],
       "color": "White",
       "driveMode": "Automatic",
       "fuelType": "Diesel"
@@ -265,12 +329,16 @@
       "id": 17,
       "brand": "Mazda",
       "model": "CX-5",
-      "year": 2022,
       "mileageLeft": 34000,
       "type": "SUV",
       "price": 26000,
       "sellercompany": "Mazda Dealership",
-      "images": ["/images/cx5.webp", "/images/cx5.webp", "/images/cx5.webp","/images/cx5.webp"],
+      "images": [
+        "/images/cx5.webp",
+        "/images/cx5.webp",
+        "/images/cx5.webp",
+        "/images/cx5.webp"
+      ],
       "color": "Red",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -279,12 +347,16 @@
       "id": 18,
       "brand": "Tesla",
       "model": "Model 3",
-      "year": 2021,
       "mileageLeft": 18000,
       "type": "Electric",
       "price": 50000,
       "sellercompany": "Tesla Motors",
-      "images": ["/images/model3.jpg", "/images/model3.jpg", "/images/model3.jpg", "/images/model3.jpg"],
+      "images": [
+        "/images/model3.jpg",
+        "/images/model3.jpg",
+        "/images/model3.jpg",
+        "/images/model3.jpg"
+      ],
       "color": "Silver",
       "driveMode": "Automatic",
       "fuelType": "Electric"
@@ -293,12 +365,16 @@
       "id": 19,
       "brand": "Acura",
       "model": "MDX",
-      "year": 2023,
       "mileageLeft": 30000,
       "type": "SUV",
       "price": 29000,
       "sellercompany": "Acura Dealership",
-      "images": ["/images/acura.webp", "/images/acura.webp", "/images/acura.webp", "/images/acura.webp"],
+      "images": [
+        "/images/acura.webp",
+        "/images/acura.webp",
+        "/images/acura.webp",
+        "/images/acura.webp"
+      ],
       "color": "Blue",
       "driveMode": "Automatic",
       "fuelType": "Petrol"
@@ -307,12 +383,16 @@
       "id": 20,
       "brand": "Land Rover",
       "model": "Range Rover",
-      "year": 2020,
       "mileageLeft": 28000,
       "type": "SUV",
       "price": 60000,
       "sellercompany": "Land Rover Dealers",
-      "images": ["/images/landrover.jpeg","/images/landrover.jpeg", "/images/landrover.jpeg", "/images/landrover.jpeg"],
+      "images": [
+        "/images/landrover.jpeg",
+        "/images/landrover.jpeg",
+        "/images/landrover.jpeg",
+        "/images/landrover.jpeg"
+      ],
       "color": "Green",
       "driveMode": "Automatic",
       "fuelType": "Petrol"

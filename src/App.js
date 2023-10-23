@@ -2,16 +2,21 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import { DealersProvider } from "./contexts/dealersContext";
 import Cars from "./pages/Cars";
+import { CarsProvier } from "./contexts/carsContext";
+import DetailedCar from "./pages/DetailedCar";
 
 function App() {
   return (
     <DealersProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Homepage />} />
-          <Route path="/cars" element={<Cars />} />
-        </Routes>
-      </BrowserRouter>
+      <CarsProvier>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Homepage />} />
+            <Route path="/cars" element={<Cars />} />
+            <Route path="/cars/:id" element={<DetailedCar />} />
+          </Routes>
+        </BrowserRouter>
+      </CarsProvier>
     </DealersProvider>
   );
 }

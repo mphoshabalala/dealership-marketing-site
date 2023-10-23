@@ -16,7 +16,7 @@ export default function Header() {
 
           <ul className="">
             <li>
-              <Link to="cars" className="mr-4 hover:text-blue-200" href="#">
+              <Link to="/cars" className="mr-4 hover:text-blue-200" href="#">
                 BUY CAR
               </Link>
               <Link
