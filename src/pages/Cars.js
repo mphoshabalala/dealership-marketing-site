@@ -14,7 +14,7 @@ export default function Cars() {
           <h1 className="text-5xl font-Bebas">OUR CARS</h1>
         </div>
 
-        <div className="flex p-24 flex-wrap  ">
+        <div className="flex p-24 flex-wrap ">
           {cars.map((car) => (
             <Car key={car.id} car={car} />
           ))}

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       <img src={underline} className="w-full" alt="" />
-      <div className=" mt-0 px-16 py-32 bg-purple-300 font-semibold flex justify-between">
+      <div className=" mt-0 px-16 py-32 bg-purple-300 font-semibold flex justify-between text-gray-700">
         <div className="">
           <h1 className="font-bold text-3xl font-Bebas">CONTACT US DIRECTLY</h1>
           <div className="flex pt-8 ">

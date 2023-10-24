@@ -4,6 +4,7 @@ import { DealersProvider } from "./contexts/dealersContext";
 import Cars from "./pages/Cars";
 import { CarsProvier } from "./contexts/carsContext";
 import DetailedCar from "./pages/DetailedCar";
+import SellYourCar from "./pages/SellYourCar";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route index element={<Homepage />} />
             <Route path="/cars" element={<Cars />} />
             <Route path="/cars/:id" element={<DetailedCar />} />
+            <Route path="/sell-your-car" element={<SellYourCar />} />
           </Routes>
         </BrowserRouter>
       </CarsProvier>
