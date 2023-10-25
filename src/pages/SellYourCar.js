@@ -135,7 +135,7 @@ export default function SellYourCar() {
                   type="file"
                   name="image"
                   accept=".pdf"
-                  class="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                  className="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 />
               </div>
               <div className="flex flex-col m-4">
@@ -146,7 +146,7 @@ export default function SellYourCar() {
                   type="file"
                   name="image"
                   accept=".pdf"
-                  class="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                  className="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 />
               </div>
             </div>

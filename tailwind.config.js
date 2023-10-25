@@ -9,6 +9,8 @@ module.exports = {
       },
       backgroundImage: {
         heroImage: "url('/src/images/heroImage.svg')",
+        dealerImage: "url('/src/images/dealerImg.svg')",
+        carImg: "url('/src/images/moreCars.svg')",
       },
       boxShadow: {
         small: "2px 2px 5px rgba(0, 0, 0, 0.1)",

@@ -25,7 +25,6 @@ export default function DetailedCar() {
   const location = useLocation();
   const carId = location.pathname.split("/").pop();
   const { getCar, isLoading, error, currentCar } = useCars();
-  // const [currentCar, setCurrentCar] = useState({});
 
   useEffect(() => {
     getCar(carId);
