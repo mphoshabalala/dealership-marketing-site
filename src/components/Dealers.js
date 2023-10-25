@@ -11,7 +11,7 @@ export default function Dealers() {
   return (
     <div
       id="dealers"
-      className="py-32 px-16 flex justify-center items-center flex-col bg-gray-100"
+      className="py-32 px-8 md:px-16 flex justify-center items-center flex-col bg-gray-100"
     >
       <div className="block  border-spacing-4 border-red-400 border-b-8 mb-16">
         <h1 className="text-5xl font-Bebas">OUR DEALERS</h1>

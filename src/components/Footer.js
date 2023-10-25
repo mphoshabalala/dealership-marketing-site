@@ -6,25 +6,25 @@ import underline from "../images/underline.svg";
 export default function Footer() {
   return (
     <>
-      <img src={underline} className="w-full" alt="" />
+      <img src={underline} className="w-full m-0" alt="" />
       <div
         className="w-full mt-0 px-8 md:px-16 py-32 bg-purple-300 font-semibold flex flex-col 
       md:flex-row items-center md:items-start  justify-between text-gray-700"
       >
-        <div className="flex flex-col sm:text-center ">
-          <h1 className="sm:text-center font-semibold  md:font-bold text-3xl font-Bebas">
+        <div className=" items-center flex flex-col text-center ">
+          <h1 className="text-center font-semibold  md:font-bold text-3xl font-Bebas">
             CONTACT US DIRECTLY
           </h1>
-          <div className="sm:text-center flex flex-col md:flex-row pt-8 ">
-            <div className="flex md:pt-8 md:pr-24">
-              <img className="sm:w-8 sm:h-8" src={iphone} alt="" />
-              <div className="">
-                <h1 className="sm:text-center ">CONTACTS</h1>
+          <div className="items-center flex flex-col md:flex-row py-8 ">
+            <div className="flex py-8 md:pr-24 items-center">
+              {/* <img className="sm:w-8 sm:h-8" src={iphone} alt="" /> */}
+              <div className="items-center">
+                <h1 className="text-center ">CONTACTS</h1>
                 <p>+27 71 569 1123</p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row pt-8">
-              <img className="sm:w-8 sm:h-8 sm:hidden" src={email} alt="" />
+            <div className="flex flex-col md:flex-row pt-8 md:pt-0">
+              {/* <img className="sm:w-8 sm:h-8 sm:hidden" src={email} alt="" /> */}
               <div className="md:pl-4">
                 <h1 className="sm:text-center ">EMAIL</h1>
                 <p className="sm:text-center ">uraclinespace3343@gmail.com</p>
@@ -34,10 +34,10 @@ export default function Footer() {
         </div>
         <div className="flex flex-col md:flex-row md:mr-8">
           <div className="flex flex-col   md:mr-16">
-            <h1 className=" text-2xl font-Bebas font-bold sm:text-center ">
+            <h1 className=" text-2xl font-Bebas font-bold text-center ">
               OUR SERVICES
             </h1>
-            <ul className="flex flex-col sm:items-center ">
+            <ul className="flex flex-col items-center ">
               <li>
                 <a href="#1">Buy Car</a>
               </li>
@@ -53,9 +53,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col sm:text-center ">
-            <h1 className="text-2xl font-Bebas font-bold">NAVIGATION</h1>
-            <ul className="sm:text-center ">
+          <div className="flex flex-col items-center ">
+            <h1 className="text-2xl font-Bebas font-bold py-8 md:py-0">
+              NAVIGATION
+            </h1>
+            <ul className="text-center">
               <li>
                 <a href="#1">Dealers</a>
               </li>

@@ -7,28 +7,30 @@ export default function SellYourCar() {
     <>
       <Header />
       <div className="pt-24 w-full flex flex-col  items-center bg-gray-100 px-16">
-        <div className="block  border-spacing-4 border-red-400 border-b-8 mb-8">
-          <h1 className="text-5xl font-Bebas text-gray-700">SELL YOUR CAR</h1>
+        <div className="block  border-spacing-4 border-red-400 border-b-4 md:border-b-8 mb-4 md:mb-8">
+          <h1 className="text-3xl md:text-5xl font-Bebas text-gray-700">
+            SELL YOUR CAR
+          </h1>
         </div>
-        <p className="text-2xl font-semibold text-gray-700">
+        <p className="md:text-2xl font-semibold text-center md:text-start text-gray-700">
           Let us help you sell your car to one of our professional deales.
         </p>
 
         <form className="w-full flex flex-col " action="">
           <div className="flex flex-col">
             <div className="w-full flex justify-center items-center flex-col ">
-              <h1 className="text-2xl font-bold text-gray-700">
+              <h1 className="text-2xl font-semibold md:font-bold text-gray-700">
                 Car Properties
               </h1>
               <div className="flex flex-col items-center">
                 <input
-                  className="w-80 my-4 px-4 py-2 font-bold"
+                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
                   type="text"
                   placeholder="Model"
                   required
                 />
                 <input
-                  className="w-80 my-4 px-4 py-2 font-bold"
+                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
                   type="text"
                   placeholder="Brand"
                   required
@@ -36,38 +38,38 @@ export default function SellYourCar() {
                 <div className="my-4 ">
                   <p className="text-green-600 pl-4">Date of purchase</p>
                   <input
-                    className="w-80  px-4 py-2 font-bold text-gray-500"
+                    className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
                     type="date"
                     placeholder="Year of purchase"
                     required
                   />
                 </div>
                 <input
-                  className="w-80 my-4 px-4 py-2 font-bold"
+                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
                   type="text"
                   placeholder="Mile age"
                   required
                 />
                 <input
-                  className="w-80 my-4 px-4 py-2 font-bold"
+                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
                   type="text"
                   placeholder="Type, e.g. Sedan, SUV"
                   required
                 />
                 <input
-                  className="w-80 my-4 px-4 py-2 font-bold"
+                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
                   type="text"
                   placeholder="Drive mode, e.g Automatic"
                   required
                 />
                 <input
-                  className="w-80 my-4 px-4 py-2 font-bold"
+                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
                   type="text"
                   placeholder="Fuel Type, e.g Petrol"
                   required
                 />
                 <input
-                  className="w-80 my-4 px-4 py-2 font-bold"
+                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
                   type="text"
                   placeholder="Max speed"
                   required
@@ -126,7 +128,7 @@ export default function SellYourCar() {
               </div>
             </div>
             <div className=" flex justify-center flex-col  items-center font-bold text-gray-700 ">
-              <h1 className="text-2xl font-bold text-gray-700 mt-8">
+              <h1 className="text-2xl font-semibold md:font-bold text-gray-700 mt-8">
                 Your documents
               </h1>
               <div className="flex flex-col m-4">

@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import facebook from "../images/facebook.png";
 import x from "../images/twitter.png";
 import instagram from "../images/instagram.png";
 import tiktok from "../images/tiktok.png";
 import menu from "../images/hamburger.png";
+import Menu from "./Menu";
 
 export default function Header() {
+  const [isMenuBarOpen, setIsMenubarOpen] = useState(false);
+
+  function handleMenu() {
+    setIsMenubarOpen((prev) => !prev);
+  }
   return (
     <>
       <header className="w-screen px-8 md:w-full md:px-16 py-4 flex items-center text-gray-700 justify-center bg-blue-400 font-semibold fixed top-0 left-0 border-b-4 border-b-red-400">
@@ -34,9 +40,12 @@ export default function Header() {
                 </Link>
               </li>
             </ul>
-            <Link className="block md:hidden">
+            <button
+              onClick={() => handleMenu()}
+              className="block w-6 md:hidden"
+            >
               <img src={menu} alt="" />
-            </Link>
+            </button>
           </div>
         </div>
       </header>
@@ -72,6 +81,8 @@ export default function Header() {
           </li>
         </ul>
       </div>
+
+      {isMenuBarOpen && <Menu setIsMenubarOpen={setIsMenubarOpen} />}
     </>
   );
 }

@@ -9,7 +9,7 @@ export default function Car({ car }) {
         pathname: `/cars/${car.id}`,
         search: `?model=${encodeURIComponent(car.model)}`,
       }}
-      className="w-1/4 h-64 flex flex-col m-2 font-semibold hover:shadow-small "
+      className=" w-full md:w-1/4 h-64 flex flex-col m-2 font-semibold hover:shadow-small "
     >
       <img className="w-full h-40" src={car.images[0]} alt="" />
       <p>
