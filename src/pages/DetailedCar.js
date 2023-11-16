@@ -29,13 +29,11 @@ export default function DetailedCar() {
   useEffect(() => {
     getCar(carId);
   }, [carId]);
-  console.log("currentCar", currentCar);
 
   if (isLoading) {
     return <Loading />;
   }
   if (error) {
-    // console.log(error);
     return <div>{error}</div>;
   }
   return (
