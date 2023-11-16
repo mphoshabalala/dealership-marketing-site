@@ -38,9 +38,8 @@ function CarsProvier({ children }) {
         .single();
 
       setCurrentCar(data);
-      console.log(data);
 
-      if (error) console.log(error);
+      if (error) console.log("Error", error);
     } catch {
       setError(error);
     } finally {

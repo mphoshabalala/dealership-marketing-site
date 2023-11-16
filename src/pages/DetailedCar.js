@@ -28,14 +28,15 @@ export default function DetailedCar() {
   console.log(carId);
   useEffect(() => {
     getCar(carId);
-  }, [carId, getCar]);
+  }, [carId]);
+  console.log("currentCar", currentCar);
 
   if (isLoading) {
     return <Loading />;
   }
-  if (error.message !== undefined) {
-    console.log(error.message);
-    return <div>{error.message}</div>;
+  if (error) {
+    // console.log(error);
+    return <div>{error}</div>;
   }
   return (
     <>
