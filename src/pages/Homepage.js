@@ -6,7 +6,6 @@ import DealersSection from "../components/DealersSection";
 import CarsSection from "../components/CarsSection";
 import SellYourCar from "./SellYourCar";
 import SellYourCarSection from "../components/SellYourCarSection";
-import supabase from "../supabase_config/supabase";
 
 export default function Homepage() {
   return (

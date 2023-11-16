@@ -1,3 +1,5 @@
+import supabase from "../supabase_config/supabase";
+
 const { createContext, useState, useEffect, useContext } = require("react");
 
 const BASE_URL = "http://localhost:8000/api/v1/dealers";
@@ -12,10 +14,12 @@ function DealersProvider({ children }) {
     async function getDealers() {
       setIsLoading(true);
       try {
-        const res = await fetch(BASE_URL);
-        const data = await res.json();
-        const dealers = data.data.dealers;
-        setDealers(dealers);
+        // const res = await fetch(BASE_URL);
+        // const data = await res.json();
+        // const dealers = data.data.dealers;
+        const { data, error } = await supabase.from("dealers").select();
+        setDealers(data);
+        console.log(data);
       } catch (err) {
         const error = await err;
         setIsLoading(false);
