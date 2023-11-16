@@ -2,14 +2,14 @@ import supabase from "../supabase_config/supabase";
 
 const { createContext, useContext, useState, useEffect } = require("react");
 
-const BASE_URL = "http://localhost:8000/api/v1/cars";
+const BASE_URL = "http://localhost:8000/api/v1/cars"; //for backend api
 const CarsContext = createContext();
 
 function CarsProvier({ children }) {
   const [cars, setCars] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentCar, setCurrentCar] = useState({});
-  const [error, setError] = useState({});
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function getCars() {
@@ -31,13 +31,18 @@ function CarsProvier({ children }) {
   async function getCar(id) {
     setIsLoading(true);
     try {
-      const res = await fetch(`${BASE_URL}/${id}`);
-      const data = await res.json();
-      const car = await data.data.car;
+      const { data, error } = await supabase
+        .from("cars")
+        .select()
+        .eq("_id", id)
+        .single();
 
-      setCurrentCar(car);
-    } catch (err) {
-      setError(err);
+      setCurrentCar(data);
+      console.log(data);
+
+      if (error) console.log(error);
+    } catch {
+      setError(error);
     } finally {
       setIsLoading(false);
     }

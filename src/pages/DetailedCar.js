@@ -28,7 +28,7 @@ export default function DetailedCar() {
   console.log(carId);
   useEffect(() => {
     getCar(carId);
-  }, [carId]);
+  }, [carId, getCar]);
 
   if (isLoading) {
     return <Loading />;
