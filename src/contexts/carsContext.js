@@ -1,6 +1,6 @@
 const { createContext, useContext, useState, useEffect } = require("react");
 
-const BASE_URL = "http://localhost:3000/cars";
+const BASE_URL = "http://localhost:8000/api/v1/cars";
 const CarsContext = createContext();
 
 function CarsProvier({ children }) {
@@ -14,7 +14,8 @@ function CarsProvier({ children }) {
       setIsLoading(true);
       try {
         const res = await fetch(BASE_URL);
-        const cars = await res.json();
+        const data = await res.json();
+        const cars = await data.data.cars;
         setCars(cars);
       } catch (err) {
         setIsLoading(false);
@@ -31,7 +32,9 @@ function CarsProvier({ children }) {
     setIsLoading(true);
     try {
       const res = await fetch(`${BASE_URL}/${id}`);
-      const car = await res.json();
+      const data = await res.json();
+      const car = await data.data.car;
+
       setCurrentCar(car);
     } catch (err) {
       setError(err);

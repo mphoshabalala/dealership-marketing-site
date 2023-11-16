@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 export default function Car({ car }) {
   return (
     <Link
-      key={car.id}
+      key={car._id}
       to={{
-        pathname: `/cars/${car.id}`,
-        search: `?model=${encodeURIComponent(car.model)}`,
+        pathname: `/cars/${car._id}`,
       }}
       className=" w-full md:w-1/4 h-64 flex flex-col m-2 font-semibold hover:shadow-small "
     >

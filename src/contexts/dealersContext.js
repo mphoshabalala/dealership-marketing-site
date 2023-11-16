@@ -1,6 +1,6 @@
 const { createContext, useState, useEffect, useContext } = require("react");
 
-const BASE_URL = "http://localhost:3000/dealers";
+const BASE_URL = "http://localhost:8000/api/v1/dealers";
 const DealersContext = createContext();
 
 function DealersProvider({ children }) {
@@ -13,7 +13,8 @@ function DealersProvider({ children }) {
       setIsLoading(true);
       try {
         const res = await fetch(BASE_URL);
-        const dealers = await res.json();
+        const data = await res.json();
+        const dealers = data.data.dealers;
         setDealers(dealers);
       } catch (err) {
         const error = await err;

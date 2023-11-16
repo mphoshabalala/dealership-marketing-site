@@ -16,7 +16,7 @@ export default function Cars() {
 
         <div className="flex p-8 md:p-24 flex-wrap ">
           {cars.map((car) => (
-            <Car key={car.id} car={car} />
+            <Car key={car._id} car={car} />
           ))}
         </div>
       </div>

@@ -23,9 +23,9 @@ import Loading from "../components/Loading";
 
 export default function DetailedCar() {
   const location = useLocation();
-  const carId = location.pathname.split("/").pop();
+  const carId = location.pathname.replace("/cars/", "").toString();
   const { getCar, isLoading, error, currentCar } = useCars();
-
+  console.log(carId);
   useEffect(() => {
     getCar(carId);
   }, [carId]);
