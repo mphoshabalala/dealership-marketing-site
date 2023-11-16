@@ -1,3 +1,5 @@
+import supabase from "../supabase_config/supabase";
+
 const { createContext, useContext, useState, useEffect } = require("react");
 
 const BASE_URL = "http://localhost:8000/api/v1/cars";
@@ -13,20 +15,18 @@ function CarsProvier({ children }) {
     async function getCars() {
       setIsLoading(true);
       try {
-        const res = await fetch(BASE_URL);
-        const data = await res.json();
-        const cars = await data.data.cars;
-        setCars(cars);
-      } catch (err) {
+        const { data, error } = await supabase.from("cars").select();
+        setCars(data);
+      } catch {
         setIsLoading(false);
-        setError(err);
+        setError(error);
       } finally {
         setIsLoading(false);
       }
     }
 
     getCars();
-  }, []);
+  }, [error]);
 
   async function getCar(id) {
     setIsLoading(true);
