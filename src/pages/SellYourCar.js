@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ScrollToTop from "../utilities/ScrollToTop";
 
 export default function SellYourCar() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <div className="pt-24 w-full flex flex-col  items-center bg-gray-100 px-16">
         <div className="block  border-spacing-4 border-red-400 border-b-4 md:border-b-8 mb-4 md:mb-8">
