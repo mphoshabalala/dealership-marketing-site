@@ -21,6 +21,7 @@ import sunroof from "../images/car.png";
 import airbag from "../images/airbag.png";
 import Loading from "../components/Loading";
 import ScrollToTop from "../utilities/ScrollToTop";
+import CarReviewForm from "../components/CarReviewForm";
 
 export default function DetailedCar() {
   const location = useLocation();
@@ -152,6 +153,7 @@ export default function DetailedCar() {
           </div>
         </div>
       </div>
+      <CarReviewForm />
       <Footer />
     </>
   );

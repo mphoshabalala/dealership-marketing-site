@@ -15,11 +15,27 @@ export default function Cars() {
         <div className="block  border-spacing-4 border-red-400 border-b-8 mt-16 ">
           <h1 className="text-5xl font-Bebas">OUR CARS</h1>
         </div>
-
-        <div className="flex p-8 md:p-24 flex-wrap ">
-          {cars.map((car) => (
-            <Car key={car._id} car={car} />
-          ))}
+        <div className="flex flex-col p-8 md:p-24 flex-wrap">
+          <div className="flex items-center">
+            <p>SORT BY:</p>
+            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm">
+              Price
+            </button>
+            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm">
+              Type
+            </button>
+            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm">
+              Dealer
+            </button>
+            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm">
+              Color
+            </button>
+          </div>
+          <div className="flex flex-wrap">
+            {cars.map((car) => (
+              <Car key={car._id} car={car} />
+            ))}
+          </div>
         </div>
       </div>
 

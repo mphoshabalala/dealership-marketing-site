@@ -26,13 +26,13 @@ export default function SellYourCar() {
               </h1>
               <div className="flex flex-col items-center">
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Model"
                   required
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Brand"
                   required
@@ -40,38 +40,38 @@ export default function SellYourCar() {
                 <div className="my-4 ">
                   <p className="text-green-600 pl-4">Date of purchase</p>
                   <input
-                    className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                    className=" w-80 p-4 border-2  border-gray-600 m-2"
                     type="date"
                     placeholder="Year of purchase"
                     required
                   />
                 </div>
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Mile age"
                   required
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Type, e.g. Sedan, SUV"
                   required
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Drive mode, e.g Automatic"
                   required
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Fuel Type, e.g Petrol"
                   required
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Max speed"
                   required
@@ -156,7 +156,7 @@ export default function SellYourCar() {
             </div>
           </div>
           <div className="flex  justify-center">
-            <button className="font-bold text-2xl bg-blue-300 px-8 py-2 rounded border-none block text-gray-700">
+            <button className="w-80 p-4 bg-blue-700 mt-4 text-gray-50 hover:bg-blue-600">
               Submit
             </button>
           </div>
