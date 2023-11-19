@@ -153,7 +153,11 @@ export default function DetailedCar() {
           </div>
         </div>
       </div>
-      <CarReviewForm />
+      <CarReviewForm
+        id={carId}
+        carModel={currentCar.model}
+        carBrand={currentCar.brand}
+      />
       <Footer />
     </>
   );

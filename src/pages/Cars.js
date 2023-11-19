@@ -6,7 +6,7 @@ import Car from "../components/Car";
 import ScrollToTop from "../utilities/ScrollToTop";
 
 export default function Cars() {
-  const { cars } = useCars();
+  const { cars, setOrderBy } = useCars();
   return (
     <>
       <ScrollToTop />
@@ -18,17 +18,26 @@ export default function Cars() {
         <div className="flex flex-col p-8 md:p-24 flex-wrap">
           <div className="flex items-center">
             <p>SORT BY:</p>
-            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm">
+            <button
+              onClick={() => setOrderBy("price")}
+              className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
+            >
               Price
             </button>
-            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm">
+            <button
+              onClick={() => setOrderBy("type")}
+              className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
+            >
               Type
             </button>
-            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm">
-              Dealer
+            <button
+              onClick={() => setOrderBy("created_at")}
+              className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
+            >
+              Recent Arival
             </button>
-            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm">
-              Color
+            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400">
+              Older Arival
             </button>
           </div>
           <div className="flex flex-wrap">

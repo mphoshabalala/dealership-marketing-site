@@ -10,12 +10,16 @@ function CarsProvier({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const [currentCar, setCurrentCar] = useState({});
   const [error, setError] = useState(null);
+  const [orderBy, setOrderBy] = useState("created_at");
 
   useEffect(() => {
     async function getCars() {
       setIsLoading(true);
       try {
-        const { data, error } = await supabase.from("cars").select();
+        const { data, error } = await supabase
+          .from("cars")
+          .select()
+          .order(orderBy, { ascending: false });
         setCars(data);
       } catch {
         setIsLoading(false);
@@ -26,7 +30,7 @@ function CarsProvier({ children }) {
     }
 
     getCars();
-  }, [error]);
+  }, [error, orderBy]);
 
   async function getCar(id) {
     setIsLoading(true);
@@ -49,7 +53,7 @@ function CarsProvier({ children }) {
 
   return (
     <CarsContext.Provider
-      value={{ cars, isLoading, error, currentCar, getCar }}
+      value={{ cars, isLoading, error, currentCar, getCar, setOrderBy }}
     >
       {children}
     </CarsContext.Provider>
