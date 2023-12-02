@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import calculator from "../images/calculator.png";
 export default function CalculateCarValue({ rightArrow }) {
   return (
     <div className="flex-col sm:mt-8  bg-cover bg-center px-8 md:px-24 h-screen flex items-center text-gray-800 md:flex-row">
@@ -27,6 +28,9 @@ export default function CalculateCarValue({ rightArrow }) {
             </span>
           </Link>
         </div>
+      </div>
+      <div className="w-1/2">
+        <img src={calculator} alt="" />
       </div>
     </div>
   );
