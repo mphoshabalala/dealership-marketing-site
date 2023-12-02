@@ -1,9 +1,8 @@
 import React from "react";
 import polo from "../images/polonobg.png";
 import { Link } from "react-router-dom";
-import rightArrow from "../images/rightArrow.png";
 
-export default function Hero() {
+export default function Hero({ rightArrow }) {
   return (
     <div className="flex flex-col-reverse h-screen w-full md:flex-row items-center justify-center bg-heroImage bg-center bg-cover bg-no-repeat bg-blue-100 px-4 py-40 md:px-16 md:py-20">
       <div className=" w-full md:w-1/3 h-full items-center  flex flex-col  justify-center md:items-start">

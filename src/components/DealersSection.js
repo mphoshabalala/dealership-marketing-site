@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { useDealers } from "../contexts/dealersContext";
 import dealer from "../images/man1.png";
 import { Link } from "react-router-dom";
-import rightArrow from "../images/rightArrow.png";
-export default function DealersSection() {
+export default function DealersSection({ rightArrow }) {
   return (
     <div className="bg-dealerImage h-screen w-full bg-center bg-cover bg-no-repeat p-8 mb-20  md:p-24">
       <div className="flex flex-col-reverse md:flex-row items-center justify-center">

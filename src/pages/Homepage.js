@@ -7,16 +7,20 @@ import CarsSection from "../components/CarsSection";
 import SellYourCar from "./SellYourCar";
 import SellYourCarSection from "../components/SellYourCarSection";
 import ScrollToTop from "../utilities/ScrollToTop";
-
+import BecomeADealer from "../components/BecomeADealer";
+import rightArrow from "../images/rightArrow.png";
+import CalculateCarValue from "../components/CalculateCarValue";
 export default function Homepage() {
   return (
     <div className="text-gray-900 bg-gray-100">
       <ScrollToTop />
       <Header />
-      <Hero />
-      <CarsSection />
-      <DealersSection />
-      <SellYourCarSection />
+      <Hero rightArrow={rightArrow} />
+      <CalculateCarValue rightArrow={rightArrow} />
+      <CarsSection rightArrow={rightArrow} />
+      <DealersSection rightArrow={rightArrow} />
+      <SellYourCarSection rightArrow={rightArrow} />
+      <BecomeADealer rightArrow={rightArrow} />
       <Footer />
     </div>
   );

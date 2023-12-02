@@ -1,9 +1,8 @@
 import React from "react";
 import car from "../images/carFront.svg";
 import { Link } from "react-router-dom";
-import rightArrow from "../images/rightArrow.png";
 
-export default function CarsSection() {
+export default function CarsSection({ rightArrow }) {
   return (
     <div className="flex-col sm:mt-8 bg-carImg bg-cover bg-center bg-no-repeat px-8 md:px-24 h-screen flex items-center text-gray-800 md:flex-row">
       <div className=" w-full md:w-1/2">
@@ -25,7 +24,7 @@ export default function CarsSection() {
             to="/cars"
             className="bg-red-700 px-4 py-2 md:py-4 md:px-8 md:text-2xl text-white font-semibold md:font-bold rounded flex items-center"
           >
-            SEE MORE{"  "}
+            SEE MORE
             <span>
               <img
                 className="h-4 ml-4  md:h-6  md:ml-8"

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import supabase from "../supabase_config/supabase";
+// import supabase from "../supabase_config/supabase";
 import { useNavigate } from "react-router-dom";
 
 export default function CarReviewForm({ carModel, carBrand, id }) {
@@ -12,29 +12,7 @@ export default function CarReviewForm({ carModel, carBrand, id }) {
   const brand = carModel;
   const model = carBrand;
   const navigate = useNavigate();
-  // console.log(Brand, Model, id, fromDate, toDate);
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    if (!name || !contacts || !email || !fromDate || !toDate) {
-      setFormError("Please fill in all the blanks");
-      return;
-    }
 
-    const { data, error } = await supabase
-      .from("carsForReview")
-      .insert({ brand, model, name, contacts, email, fromDate, toDate });
-
-    if (error) {
-      console.log(error);
-      setFormError("Please fill in all the blanks correctly");
-    }
-
-    if (data) {
-      console.log(data);
-      setFormError(null);
-      navigate("/");
-    }
-  };
   return (
     <div className=" h-full my-8 mx-8 p-8 font-bold text-gray-700">
       <h1 className="text-5xl text-blue-600">
@@ -44,7 +22,7 @@ export default function CarReviewForm({ carModel, carBrand, id }) {
 
       <form
         className=" w-full flex flex-col items-center justify-center mt-16"
-        onSubmit={handleFormSubmit}
+        // onSubmit={handleFormSubmit}
       >
         {formError && <p>{formError}</p>}
         <input
