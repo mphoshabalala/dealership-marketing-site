@@ -2,7 +2,8 @@ import supabase from "../supabase_config/supabase";
 
 const { createContext, useContext, useState, useEffect } = require("react");
 
-const BASE_URL = "http://localhost:8000/api/v1/cars"; //for backend api
+// const BASE_URL = "http://localhost:8000/api/v1/cars"; //for backend api
+const BASE_URL = "http://localhost:8000/cars"; //json-server
 const CarsContext = createContext();
 
 function CarsProvier({ children }) {
@@ -16,11 +17,17 @@ function CarsProvier({ children }) {
     async function getCars() {
       setIsLoading(true);
       try {
+        // supabase data
         const { data, error } = await supabase
           .from("cars")
           .select()
           .order(orderBy, { ascending: false });
+
+        // json server
+        const res = await fetch(BASE_URL);
+        const cars = await res.json();
         setCars(data);
+        console.log(data);
       } catch {
         setIsLoading(false);
         setError(error);
@@ -40,7 +47,8 @@ function CarsProvier({ children }) {
         .select()
         .eq("_id", id)
         .single();
-
+      const res = await fetch(`${BASE_URL}/${id}`);
+      const car = await res.json();
       setCurrentCar(data);
 
       if (error) console.log("Error", error);

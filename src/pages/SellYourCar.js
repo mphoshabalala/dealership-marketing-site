@@ -2,6 +2,9 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../utilities/ScrollToTop";
+import Input from "../components/Input";
+import FileInput from "../components/FileInput";
+import SubmitButton from "../components/SubmitButton";
 
 export default function SellYourCar() {
   return (
@@ -25,57 +28,23 @@ export default function SellYourCar() {
                 Car Properties
               </h1>
               <div className="flex flex-col items-center">
-                <input
-                  className=" w-80 p-4 border-2  border-gray-600 m-2"
-                  type="text"
-                  placeholder="Model"
-                  required
-                />
-                <input
-                  className=" w-80 p-4 border-2  border-gray-600 m-2"
-                  type="text"
-                  placeholder="Brand"
-                  required
-                />
-                <div className="my-4 ">
-                  <p className="text-green-600 pl-4">Date of purchase</p>
-                  <input
-                    className=" w-80 p-4 border-2  border-gray-600 m-2"
-                    type="date"
-                    placeholder="Year of purchase"
-                    required
-                  />
+                <div className="flex">
+                  <Input placeholder={"Model"} />
+                  <Input placeholder={"Brand"} />
                 </div>
-                <input
-                  className=" w-80 p-4 border-2  border-gray-600 m-2"
-                  type="text"
-                  placeholder="Mile age"
-                  required
-                />
-                <input
-                  className=" w-80 p-4 border-2  border-gray-600 m-2"
-                  type="text"
-                  placeholder="Type, e.g. Sedan, SUV"
-                  required
-                />
-                <input
-                  className=" w-80 p-4 border-2  border-gray-600 m-2"
-                  type="text"
-                  placeholder="Drive mode, e.g Automatic"
-                  required
-                />
-                <input
-                  className=" w-80 p-4 border-2  border-gray-600 m-2"
-                  type="text"
-                  placeholder="Fuel Type, e.g Petrol"
-                  required
-                />
-                <input
-                  className=" w-80 p-4 border-2  border-gray-600 m-2"
-                  type="text"
-                  placeholder="Max speed"
-                  required
-                />
+                <div className="flex-col">
+                  <p className="text-green-600 pl-4">Date of purchase</p>
+                  <Input placeholder={"Year Of Purchase"} />
+                  <Input placeholder={"Mileage"} />
+                </div>
+                <div className="flex">
+                  <Input placeholder={"Type, e.g. Sedan, SUV"} />
+                  <Input placeholder={"Drive mode, e.g Automatic"} />
+                </div>
+                <div className="flex">
+                  <Input placeholder={"Fuel Type, e.g Petrol"} />
+                  <Input placeholder={"Max speed"} />
+                </div>
                 <p className="text-red-600">
                   Note: other features will be considerd after you have been
                   called for a review
@@ -86,79 +55,48 @@ export default function SellYourCar() {
               <h1 className="text-2xl font-bold text-gray-700 mt-8">
                 Car Images
               </h1>
-              <div className="flex flex-col m-4">
-                <p className="py-2">Full Exterior :</p>
-                <input
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  class="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
-              </div>
-              <div className="flex flex-col m-4">
-                <p className="py-2">Interior dashboard :</p>
-                <input
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  class="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
+              <div className="flex">
+                <div className="flex flex-col m-4">
+                  <p className="py-2">Full Exterior :</p>
+                  <FileInput type="file" name="image" accept="image/*" />
+                </div>
+                <div className="flex flex-col m-4">
+                  <p className="py-2">Interior dashboard :</p>
+                  <FileInput type="file" name="image" accept="image/*" />
+                </div>
               </div>
               <div className="flex flex-col m-4">
                 <p className="py-2">Two interior images :</p>
-                <input
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  class="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
-                <input
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  class="py-2 mt-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
+                <div className="flex">
+                  <FileInput type="file" name="image" accept="image/*" />
+                  <FileInput type="file" name="image" accept="image/*" />
+                </div>
               </div>
               <div className="flex flex-col m-4">
                 <p className="py-2">Engine :</p>
-                <input
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  class="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
+                <FileInput type="file" name="image" accept="image/*" />
               </div>
             </div>
             <div className=" flex justify-center flex-col  items-center font-bold text-gray-700 ">
               <h1 className="text-2xl font-semibold md:font-bold text-gray-700 mt-8">
                 Your documents
               </h1>
-              <div className="flex flex-col m-4">
-                <p className="py-2">certified ID copy(pdf) :</p>
-                <input
-                  type="file"
-                  name="image"
-                  accept=".pdf"
-                  className="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
-              </div>
-              <div className="flex flex-col m-4">
-                <p className="py-2">
-                  Certified copy of your car registration document(pdf) :
-                </p>
-                <input
-                  type="file"
-                  name="image"
-                  accept=".pdf"
-                  className="py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
+              <div className="flex">
+                <div className="flex flex-col m-4">
+                  <p className="py-2">certified ID copy(pdf) :</p>
+                  <FileInput type="file" name="image" accept=".pdf" />
+                </div>
+                <div className="flex flex-col m-4">
+                  <p className="py-2">
+                    Certified copy of your car registration document(pdf) :
+                  </p>
+                  <FileInput type="file" name="image" accept=".pdf" />
+                </div>
               </div>
             </div>
           </div>
           <div className="flex  justify-center">
-            <button className="w-80 p-4 bg-blue-700 mt-4 text-gray-50 hover:bg-blue-600">
-              Submit
-            </button>
+            <SubmitButton />
           </div>
         </form>
       </div>

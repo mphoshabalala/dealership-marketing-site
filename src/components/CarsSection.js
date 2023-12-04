@@ -1,6 +1,7 @@
 import React from "react";
 import car from "../images/carFront.svg";
 import { Link } from "react-router-dom";
+import CallToActionButton from "./CallToActionButton";
 
 export default function CarsSection({ rightArrow }) {
   return (
@@ -19,20 +20,13 @@ export default function CarsSection({ rightArrow }) {
           cars are well maintained and preserved for our beloved customers,
           click the link below and make a worthwile life decision.
         </p>
-        <div className="border-blue-200 border-2 flex  justify-center  p-2 rounded mt-4">
-          <Link
+        <div className="border-blue-200 border-2 flex items-center justify-center  p-2 rounded mt-4">
+          <CallToActionButton
             to="/cars"
-            className="bg-red-700 px-4 py-2 md:py-4 md:px-8 md:text-2xl text-white font-semibold md:font-bold rounded flex items-center"
-          >
-            SEE MORE
-            <span>
-              <img
-                className="h-4 ml-4  md:h-6  md:ml-8"
-                src={rightArrow}
-                alt=""
-              />
-            </span>
-          </Link>
+            rightArrow={rightArrow}
+            text="SEE MORE"
+            bg_color="bg-red-700"
+          />
         </div>
       </div>
     </div>

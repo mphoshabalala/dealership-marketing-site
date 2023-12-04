@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import DealersSection from "../components/DealersSection";
 import CarsSection from "../components/CarsSection";
-import SellYourCar from "./SellYourCar";
 import SellYourCarSection from "../components/SellYourCarSection";
 import ScrollToTop from "../utilities/ScrollToTop";
 import BecomeADealer from "../components/BecomeADealer";
