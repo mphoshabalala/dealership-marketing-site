@@ -8,25 +8,30 @@ import SellYourCar from "./pages/SellYourCar";
 import DealersPage from "./pages/DealersPage";
 import CarWorthCalculator from "./pages/CarWorthCalculator";
 import BecomeADealer from "./pages/BecomeADealer";
+import { SellYourCarProvider } from "./contexts/SellYourCarContext";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
     <DealersProvider>
       <CarsProvier>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Homepage />} />
-            <Route path="/cars" element={<Cars />} />
-            <Route path="/cars/:id" element={<DetailedCar />} />
-            <Route path="/sell-your-car" element={<SellYourCar />} />
-            <Route path="/dealers" element={<DealersPage />} />
-            <Route path="/become-a-dealer" element={<BecomeADealer />} />
-            <Route
-              path="/calculate-car-worth"
-              element={<CarWorthCalculator />}
-            />
-          </Routes>
-        </BrowserRouter>
+        <SellYourCarProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route index element={<Homepage />} />
+              <Route path="/cars" element={<Cars />} />
+              <Route path="/cars/:id" element={<DetailedCar />} />
+              <Route path="/sell-your-car" element={<SellYourCar />} />
+              <Route path="/dealers" element={<DealersPage />} />
+              <Route path="/become-a-dealer" element={<BecomeADealer />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route
+                path="/calculate-car-worth"
+                element={<CarWorthCalculator />}
+              />
+            </Routes>
+          </BrowserRouter>
+        </SellYourCarProvider>
       </CarsProvier>
     </DealersProvider>
   );

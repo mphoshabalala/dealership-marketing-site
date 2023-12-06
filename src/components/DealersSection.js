@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import { useDealers } from "../contexts/dealersContext";
+import React from "react";
 import dealer from "../images/man1.png";
-import { Link } from "react-router-dom";
 import CallToActionButton from "./CallToActionButton";
 export default function DealersSection({ rightArrow }) {
   return (

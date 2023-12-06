@@ -20,29 +20,29 @@ export default function Cars() {
             <p>SORT BY:</p>
             <button
               onClick={() => setOrderBy("price")}
-              className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
+              className="m-2 px-2 md:px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
             >
               Price
             </button>
             <button
               onClick={() => setOrderBy("type")}
-              className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
+              className="m-2 px-2 md:px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
             >
               Type
             </button>
             <button
               onClick={() => setOrderBy("created_at")}
-              className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
+              className="m-2 px-2 md:px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
             >
               Recent Arival
             </button>
-            <button className="m-2 px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400">
+            <button className="m-2 px-2 md:px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400">
               Older Arival
             </button>
           </div>
           <div className="flex flex-wrap">
             {cars.map((car) => (
-              <Car key={car._id} car={car} />
+              <Car key={car.id} car={car} />
             ))}
           </div>
         </div>

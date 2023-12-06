@@ -7,7 +7,7 @@ export default function Car({ car }) {
       key={car._id}
       to={{
         // pathname: `/cars/${car._id}`,  //update for supabase
-        pathname: `/cars/${car._id}`, //update for supabase
+        pathname: `/cars/${car.id}`, //update for json-server
       }}
       className=" w-full md:w-1/4 h-64 flex flex-col m-2 font-semibold hover:shadow-small "
     >

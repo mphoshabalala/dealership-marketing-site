@@ -15,7 +15,7 @@ export default function CarReviewForm({ carModel, carBrand, id }) {
 
   return (
     <div className=" h-full my-8 mx-8 p-8 font-bold text-gray-700">
-      <h1 className="text-5xl text-blue-600">
+      <h1 className="text-2xl md:text-5xl text-blue-600">
         Do you like this car? fill the form below to book for a car review with
         the dealer.
       </h1>
@@ -26,17 +26,17 @@ export default function CarReviewForm({ carModel, carBrand, id }) {
       >
         {formError && <p>{formError}</p>}
 
-        <div className="flex">
+        <div className="flex-col md:flex-row">
           <Input type="email" placeholder="Full name" />
           <Input type="email" placeholder="Contacts" />
           <Input type="email" placeholder="Email" />
         </div>
-        <p className="text-red-700">
+        <p className="text-red-700 text-center">
           When Will you be available for a review?, we can fit you in our
           schedule and help you get your car, pick any two dates below while the
           car is still available.
         </p>
-        <div className="flex">
+        <div className="flex-col md:flex">
           <div className="flex flex-col items-start">
             <label htmlFor="date">From:</label>
             <Input type="date" />

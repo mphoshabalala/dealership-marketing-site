@@ -4,9 +4,11 @@ import calculator from "../images/calculator.png";
 import CallToActionButton from "./CallToActionButton";
 export default function CalculateCarValue({ rightArrow }) {
   return (
-    <div className="flex-col sm:mt-8  bg-cover bg-center px-8 md:px-24 h-3/4 flex items-center text-gray-800 md:flex-row">
+    <div className="flex-col-reverse sm:mt-8  bg-cover bg-center px-8 md:px-24 h-3/4 flex items-center text-gray-800 md:flex-row">
       <div className="w-full sm:mt-8  md:w-1/2 flex flex-col items-start md:ml-8">
-        <h1 className="text-5xl font-bold ">HOW MUCH DOES YOUR CAR COST??</h1>
+        <h1 className="text-2xl  md:font-bold   md:text-4xl  justify-center font-Bebas mb-8 ">
+          HOW MUCH DOES YOUR CAR COST??
+        </h1>
         <p className="md:text-2xl text-gray-600 font-semibold flex flex-col items-start">
           Let us help you determine the value of your car. At Echowheels we can
           help you determine the value of your car, we use a trustworthy

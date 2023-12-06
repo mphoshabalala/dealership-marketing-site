@@ -22,6 +22,7 @@ import airbag from "../images/airbag.png";
 import Loading from "../components/Loading";
 import ScrollToTop from "../utilities/ScrollToTop";
 import CarReviewForm from "../components/CarReviewForm";
+import CarPropertyItem from "../components/CarPropertyItem";
 
 export default function DetailedCar() {
   const location = useLocation();
@@ -44,7 +45,7 @@ export default function DetailedCar() {
       <Header />
       <div className="pt-24 w-full flex flex-col  items-center bg-gray-100 text-gray-800">
         <div className="block  border-spacing-4 border-red-400 border-b-8 md:mb-16">
-          <h1 className="text-5xl font-Bebas">
+          <h1 className="text-2xl md:text-5xl font-Bebas">
             {currentCar.brand} {currentCar.model}
           </h1>
         </div>
@@ -92,63 +93,84 @@ export default function DetailedCar() {
 
             <ul className="p-4 font-bold text-gray-700 flex flex-wrap">
               <h1 className="pr-4">Technology: </h1>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={bluetooth} alt="" />
-                <p>Bluetooth: {currentCar.bluetoothConnectivity}</p>
-              </li>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={electricWindows} alt="" />
-                <p>Electric Windows: {currentCar.electricWindows}</p>
-              </li>
+              <CarPropertyItem
+                currentCarFeature={currentCar.bluetoothConnectivity}
+                icon={bluetooth}
+                text="Bluetooth"
+              />
+              <CarPropertyItem
+                currentCarFeature={currentCar.electricWindows}
+                icon={electricWindows}
+                text="Electric Windows"
+              />
 
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={airConditioning} alt="" />
-                <p>Air Conditioning: {currentCar.airConditioning}</p>
-              </li>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={usb} alt="" />
-                <p>USB: {currentCar.usbPort}</p>
-              </li>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={remote} alt="" />
-                <p>Remote Locking: {currentCar.remoteCentralLocking}</p>
-              </li>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={pressureSensor} alt="" />
-                <p>Tyre Pressure Sensor: {currentCar.tyrePressureSensor}</p>
-              </li>
+              <CarPropertyItem
+                currentCarFeature={currentCar.airConditioning}
+                icon={airConditioning}
+                text="Air Conditioning"
+              />
+
+              <CarPropertyItem
+                currentCarFeature={currentCar.usbPort}
+                icon={usb}
+                text="USB"
+              />
+
+              <CarPropertyItem
+                currentCarFeature={currentCar.remoteCentralLocking}
+                icon={remote}
+                text="Remote Locking"
+              />
+
+              <CarPropertyItem
+                currentCarFeature={currentCar.tyrePressureSensor}
+                icon={pressureSensor}
+                text="Tyre Pressure Sensor"
+              />
             </ul>
 
             <ul className="p-4 font-bold text-gray-700 flex flex-wrap">
               <h1 className="pr-4">Features: </h1>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={engine} alt="" />
-                <p>Engine Capacity: {currentCar.engineCapacityLitre} litres</p>
-              </li>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={fuelCapacity} alt="" />
-                <p>Fuel Capacity: {currentCar.fuelCapacity} litres</p>
-              </li>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={fuelCapacity} alt="" />
-                <p>
-                  Fuel Consumption Avg: {currentCar.fuelConsumptionAverage}
-                  litres/km
-                </p>
-              </li>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={maximumTopSpeed} alt="" />
-                <p>Top Speed: {currentCar.maximumTopSpeed} km/h max</p>
-              </li>
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={sunroof} alt="" />
-                <p>Sunroof: {currentCar.sunroof}</p>
-              </li>
 
-              <li className="md:h-8 px-2 bg-gray-200 flex justify-center items-center rounded mr-2 mb-2">
-                <img className="h-4 w-4 mr-2" src={airbag} alt="" />
-                <p>Airbag Quantity: {currentCar.airbagQuantity}</p>
-              </li>
+              <CarPropertyItem
+                currentCarFeature={currentCar.engineCapacityLitre}
+                icon={engine}
+                text="Engine Capacity"
+                SIUnit="litres"
+              />
+
+              <CarPropertyItem
+                currentCarFeature={currentCar.fuelCapacity}
+                icon={fuelCapacity}
+                text="Fuel Capacity"
+                SIUnit="litres"
+              />
+
+              <CarPropertyItem
+                currentCarFeature={currentCar.fuelConsumptionAverage}
+                icon={fuelCapacity}
+                text="Fuel Consumption Avg"
+                SIUnit="litres/km"
+              />
+
+              <CarPropertyItem
+                currentCarFeature={currentCar.maximumTopSpeed}
+                icon={maximumTopSpeed}
+                text="Top Speed"
+                SIUnit="km/h max"
+              />
+
+              <CarPropertyItem
+                currentCarFeature={currentCar.sunroof}
+                icon={sunroof}
+                text="Sunroof"
+              />
+
+              <CarPropertyItem
+                currentCarFeature={currentCar.airbagQuantity}
+                icon={airbag}
+                text="Airbag Quantity"
+              />
             </ul>
           </div>
         </div>
