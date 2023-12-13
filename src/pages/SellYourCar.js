@@ -6,6 +6,7 @@ import Input from "../components/Input";
 import FileInput from "../components/FileInput";
 import SubmitButton from "../components/SubmitButton";
 import axios from "axios";
+import { convertToBase64 } from "../utilities/convertToBase64";
 
 const BASE_URL = "";
 
@@ -28,21 +29,7 @@ export default function SellYourCar() {
     carRegistrationImg: "",
   });
 
-  // decode files to base 64
-  const convertToBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fr = new FileReader();
-      fr.readAsDataURL(file);
-      fr.onload = () => {
-        resolve(fr.result);
-      };
-      fr.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
-
-  // handle input changee and update the setForm state
+  // handle input change and update the setForm state
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
@@ -50,16 +37,19 @@ export default function SellYourCar() {
 
   //handle file change and convert to base 64 encoding
   const handleFileChange = async (e, field) => {
-    const files = e.target.files;
+    const files = await e.target.files;
+    //check if theres a file
     if (files && files.length > 0) {
-      const file = files[0];
-      const base64 = await convertToBase64(file);
-      // update the setForm state
+      // convert the file to base64 encoding
+      const base64 = await convertToBase64(files[0]);
+      console.log(base64);
+      // update the setForm state bny storing base64 file
       setForm((prevForm) => ({ ...prevForm, [field]: base64 }));
     }
   };
 
   const handleFormSubmit = async (e) => {
+    console.log(form);
     e.preventDefault();
     // instantiate formData object for holding formData datatype
     const formData = new FormData();
@@ -148,7 +138,7 @@ export default function SellYourCar() {
           Let us help you sell your car to one of our professional deales.
         </p>
 
-        <form className="w-full flex flex-col " action="">
+        <form className="w-full flex flex-col " onSubmit={handleFormSubmit}>
           <div className="flex flex-col">
             <div className="w-full flex justify-center items-center flex-col ">
               <h1 className="text-2xl font-semibold md:font-bold text-gray-700">
@@ -176,6 +166,7 @@ export default function SellYourCar() {
                     value={form.dateOfPurchase}
                     onChange={handleInputChange}
                     name="dateOfPurchase"
+                    type="date"
                   />
                   <Input
                     placeholder={"Mileage"}
@@ -184,7 +175,7 @@ export default function SellYourCar() {
                     name="mileage"
                   />
                 </div>
-                <div className="flex">
+                <div className="flex-col md:flex-row">
                   <Input
                     placeholder={"Type, e.g. Sedan, SUV"}
                     value={form.carType}
@@ -198,7 +189,7 @@ export default function SellYourCar() {
                     name="driveMode"
                   />
                 </div>
-                <div className="flex">
+                <div className="flex-col md:flex-row">
                   <Input
                     placeholder={"Fuel Type, e.g Petrol"}
                     value={form.fuelType}
@@ -222,7 +213,7 @@ export default function SellYourCar() {
               <h1 className="text-2xl font-bold text-gray-700 mt-8">
                 Car Images
               </h1>
-              <div className="flex">
+              <div className="flex-col md:flex-row">
                 <div className="flex flex-col m-4">
                   <p className="py-2">Full Exterior :</p>
                   <FileInput
@@ -237,7 +228,7 @@ export default function SellYourCar() {
                   <FileInput type="file" name="image" accept="image/*" />
                 </div>
               </div>
-              <div className="flex flex-col m-4">
+              <div className="md:flex-row flex-col m-4">
                 <p className="py-2">Two interior images :</p>
                 <div className="flex">
                   <FileInput

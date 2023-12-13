@@ -8,7 +8,7 @@ export default function DealersSection({ rightArrow }) {
         <div className="md:w-1/2 w-full flex flex-col items-start">
           <h1 className="text-2xl  md:font-bold   md:text-4xl  justify-center font-Bebas mb-8 ">
             MEET OUR DEALERS AND PURCHASE YOUR
-            <span className="text-blue-600 text-3xl md:text-5xl">DREAM</span>
+            <span className="text-blue-600 text-3xl md:text-5xl"> DREAM </span>
             <span className="text-3xl md:text-5xl">CAR</span>
           </h1>
           <p className="md:text-2xl text-gray-600 font-semibold">

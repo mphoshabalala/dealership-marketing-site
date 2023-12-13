@@ -18,16 +18,16 @@ function CarsProvier({ children }) {
       setIsLoading(true);
       try {
         // supabase data
-        // const { data, error } = await supabase
-        //   .from("cars")
-        //   .select()
-        //   .order(orderBy, { ascending: false });
+        const { data, error } = await supabase
+          .from("cars")
+          .select()
+          .order(orderBy, { ascending: false });
 
         // json server
-        const res = await fetch(BASE_URL);
-        const cars = await res.json();
-        // setCars(data); //update for supabase
-        setCars(cars); //update for json-server
+        // const res = await fetch(BASE_URL);
+        // const cars = await res.json();
+        setCars(data); //update for supabase
+        // setCars(cars); //update for json-server
         // console.log(data);
       } catch {
         setIsLoading(false);
@@ -43,15 +43,15 @@ function CarsProvier({ children }) {
   async function getCar(id) {
     setIsLoading(true);
     try {
-      // const { data, error } = await supabase
-      //   .from("cars")
-      //   .select()
-      //   .eq("_id", id)
-      //   .single();
-      const res = await fetch(`${BASE_URL}/${id}`);
-      const car = await res.json();
-      // setCurrentCar(data);  //update from supabase
-      setCurrentCar(car); //update from json-server
+      const { data, error } = await supabase
+        .from("cars")
+        .select()
+        .eq("_id", id)
+        .single();
+      // const res = await fetch(`${BASE_URL}/${id}`);
+      // const car = await res.json();
+      setCurrentCar(data); //update from supabase
+      // setCurrentCar(car); //update from json-server
 
       if (error) console.log("Error", error);
     } catch {

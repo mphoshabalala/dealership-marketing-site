@@ -18,11 +18,15 @@ function DealersProvider({ children }) {
         // const res = await fetch(BASE_URL);  //from backend
         // const data = await res.json();
         // const dealers = data.data.dealers;
+
+        // fetch from supabase
         const { data, error } = await supabase.from("dealers").select();
-        const res = await fetch(BASE_URL);
-        const dealers = await res.json();
+        // fetch from json-server
+        // const res = await fetch(BASE_URL);
+        // const dealers = await res.json();
         setDealers(data);
-        console.log(data);
+        // setDealers(dealers);
+        // console.log(data);
       } catch (err) {
         const error = await err;
         setIsLoading(false);

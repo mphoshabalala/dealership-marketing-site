@@ -64,7 +64,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-gray-400">Terms & Conditions</Link>
+                <Link
+                  to="/terms-and-conditions"
+                  className="hover:text-gray-400"
+                >
+                  Terms & Conditions
+                </Link>
               </li>
             </ul>
           </div>

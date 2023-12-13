@@ -15,7 +15,7 @@ export default function Header() {
   }
   return (
     <>
-      <header className="w-screen px-8 md:w-full md:px-16 py-4 flex items-center text-gray-700 justify-center bg-blue-400 font-semibold fixed top-0 left-0 border-b-4 border-b-red-400">
+      <header className="w-screen px-8 md:w-full md:px-16 py-4 flex items-center text-gray-700 justify-center bg-blue-400 font-semibold fixed top-0 left-0 border-b-4 border-b-red-400 z-10">
         <div className="container flex justify-between items-center">
           <Link to="/">
             <h1 className="md:text-3xl">ECOWHEELS</h1>

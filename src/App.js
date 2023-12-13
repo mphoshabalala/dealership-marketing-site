@@ -10,6 +10,7 @@ import CarWorthCalculator from "./pages/CarWorthCalculator";
 import BecomeADealer from "./pages/BecomeADealer";
 import { SellYourCarProvider } from "./contexts/SellYourCarContext";
 import AboutUs from "./pages/AboutUs";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
               <Route path="/dealers" element={<DealersPage />} />
               <Route path="/become-a-dealer" element={<BecomeADealer />} />
               <Route path="/about-us" element={<AboutUs />} />
+              <Route
+                path="/terms-and-conditions"
+                element={<TermsAndConditions />}
+              />
               <Route
                 path="/calculate-car-worth"
                 element={<CarWorthCalculator />}

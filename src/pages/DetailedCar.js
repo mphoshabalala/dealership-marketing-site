@@ -23,8 +23,10 @@ import Loading from "../components/Loading";
 import ScrollToTop from "../utilities/ScrollToTop";
 import CarReviewForm from "../components/CarReviewForm";
 import CarPropertyItem from "../components/CarPropertyItem";
+import SubmitButton from "../components/SubmitButton";
 
 export default function DetailedCar() {
+  const [isModalOpen, setModalOpen] = useState(false);
   const location = useLocation();
   const carId = location.pathname.replace("/cars/", "").toString();
   const { getCar, isLoading, error, currentCar } = useCars();
@@ -43,7 +45,7 @@ export default function DetailedCar() {
     <>
       <ScrollToTop />
       <Header />
-      <div className="pt-24 w-full flex flex-col  items-center bg-gray-100 text-gray-800">
+      <div className="pt-24 relative w-full flex flex-col  items-center bg-gray-100 text-gray-800">
         <div className="block  border-spacing-4 border-red-400 border-b-8 md:mb-16">
           <h1 className="text-2xl md:text-5xl font-Bebas">
             {currentCar.brand} {currentCar.model}
@@ -174,12 +176,21 @@ export default function DetailedCar() {
             </ul>
           </div>
         </div>
+        <SubmitButton
+          text="PURCHASE"
+          onClick={() => setModalOpen((prev) => !prev)}
+        />
+        {/* {console.log(isModalOpen)} */}
       </div>
-      <CarReviewForm
-        id={carId}
-        carModel={currentCar.model}
-        carBrand={currentCar.brand}
-      />
+
+      {isModalOpen && (
+        <CarReviewForm
+          setModalOpen={setModalOpen}
+          carModel={currentCar.model}
+          carBrand={currentCar.brand}
+          id={carId}
+        />
+      )}
       <Footer />
     </>
   );
