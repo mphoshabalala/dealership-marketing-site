@@ -15,6 +15,9 @@ module.exports = {
       boxShadow: {
         small: "2px 2px 5px rgba(0, 0, 0, 0.1)",
       },
+      width: {
+        "w-200": "50rem",
+      },
     },
   },
   plugins: [],

@@ -18,8 +18,8 @@ export default function Dealers() {
       </div>
       <div className="flex flex-wrap justify-center">
         {dealers.map((dealer) => (
-          // <Dealer key={dealer.id} dealer={dealer} />  //from json-server
-          <Dealer key={dealer._id} dealer={dealer} /> //from supabase
+          <Dealer key={dealer.id} dealer={dealer} /> //from json-server
+          // <Dealer key={dealer._id} dealer={dealer} /> //from supabase
         ))}
       </div>
     </div>

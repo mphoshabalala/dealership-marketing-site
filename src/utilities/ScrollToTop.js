@@ -8,5 +8,6 @@ export default function ScrollToTop() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  return null;
+  return <div id="up"></div>;
+  // return null;  //return null if the id is never used
 }

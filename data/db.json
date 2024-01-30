@@ -5,35 +5,71 @@
       "dealerImg": "/images/man1.png",
       "companyName": "ExquisiteMotors",
       "dealerLocation": "New York, NY",
-      "owner": "John Smith"
+      "name": "John Smith",
+      "logoImg":"/images/logo1.png",
+      "slogan":"Best motors ever",
+      "dealershipInformation":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum neque laudantium minus est veritatis iure. Praesentium, cum? Esse,sequi ad, placeat vero dolorum molestias odit optio, iure delectusfacilis numquam eveniet nihil? Libero, animi,",
+      "weeklyOpenTime": "08:00",
+      "weeklyCloseTime": "17:00",
+      "weekendOpenTime":"09:00",
+      "weekendCloseTime":"16:00"
+
     },
     {
       "id": 1,
       "dealerImg": "/images/man2.webp",
       "companyName": "EasyTreansport",
       "dealerLocation": "Los Angeles, CA",
-      "owner": "Jane Doe"
+      "name": "Jane Doe",
+      "logoImg":"/images/logo1.png",
+      "slogan":"Best motors ever",
+      "dealershipInformation":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum neque laudantium minus est veritatis iure. Praesentium, cum? Esse,sequi ad, placeat vero dolorum molestias odit optio, iure delectusfacilis numquam eveniet nihil? Libero, animi,",
+      "weeklyOpenTime": "08:00",
+      "weeklyCloseTime": "17:00",
+      "weekendOpenTime":"09:00",
+      "weekendCloseTime":"16:00"
     },
     {
       "id": 2,
       "dealerImg": "/images/man3.webp",
       "companyName": "BestMotors",
       "dealerLocation": "Chicago, IL",
-      "owner": "David Johnson"
+      "name": "David Johnson",
+      "logoImg":"/images/logo1.png",
+      "slogan":"Best motors ever",
+      "dealershipInformation":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum neque laudantium minus est veritatis iure. Praesentium, cum? Esse,sequi ad, placeat vero dolorum molestias odit optio, iure delectusfacilis numquam eveniet nihil? Libero, animi,",
+      "weeklyOpenTime": "08:00",
+      "weeklyCloseTime": "17:00",
+      "weekendOpenTime":"09:00",
+      "weekendCloseTime":"16:00"
     },
     {
       "id": 3,
       "dealerImg": "/images/man4.png",
       "companyName": "ExquisiteMotors",
       "dealerLocation": "Miami, FL",
-      "owner": "Maria Garcia"
+      "name": "Maria Garcia",
+      "logoImg":"/images/logo1.png",
+      "slogan":"Best motors ever",
+      "dealershipInformation":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum neque laudantium minus est veritatis iure. Praesentium, cum? Esse,sequi ad, placeat vero dolorum molestias odit optio, iure delectusfacilis numquam eveniet nihil? Libero, animi,",
+      "weeklyOpenTime": "08:00",
+      "weeklyCloseTime": "17:00",
+      "weekendOpenTime":"09:00",
+      "weekendCloseTime":"16:00"
     },
     {
       "id": 4,
       "dealerImg": "/images/man5.webp",
       "companyName": "ExquisiteMotors",
       "dealerLocation": "Dallas, TX",
-      "owner": "Michael Wilson"
+      "name": "Michael Wilson",
+      "logoImg":"/images/logo1.png",
+      "slogan":"Best motors ever",
+      "dealershipInformation":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum neque laudantium minus est veritatis iure. Praesentium, cum? Esse,sequi ad, placeat vero dolorum molestias odit optio, iure delectusfacilis numquam eveniet nihil? Libero, animi,",
+      "weeklyOpenTime": "08:00",
+      "weeklyCloseTime": "17:00",
+      "weekendOpenTime":"09:00",
+      "weekendCloseTime":"16:00"
     }
   ],
   "cars": [
@@ -46,7 +82,7 @@
       "type": "Sedan",
       "price": 25000,
       "sellerCompany": "Auto World",
-      "images": ["/images/camry.jpg", "/images/camry.jpg", "/images/camry.jpg", "/images/camry.jpg"],
+      "images": ["/images/camry.jpg", "/images/crv.jpg", "/images/tazz.jpg", "/images/altima.jpg"],
       "color": "Silver",
       "driveMode": "Automatic",
       "fuelType": "Petrol",
@@ -106,7 +142,7 @@
       "type": "Sedan",
       "price": 35000,
       "sellerCompany": "Cars Central",
-      "images": ["/images/tazz.jpg", "/images/tazz.jpg", "/images/tazz.jpg", "/images/tazz.jpg"],
+      "images": ["/images/tazz.jpg", "/images/santa.webp", "/images/cherokee.avif", "/images/tazz.jpg"],
       "color": "Red",
       "driveMode": "Automatic",
       "fuelType": "Petrol",
@@ -136,7 +172,7 @@
       "type": "Sedan",
       "price": 22000,
       "sellerCompany": "Nissan Dealership",
-      "images": ["/images/altima.jpg", "/images/altima.jpg", "/images/altima.jpg", "/images/altima.jpg"],
+      "images": ["/images/altima.jpg", "/images/cherokee.avif", "/images/altima.jpg", "/images/altima.jpg"],
       "color": "Black",
       "driveMode": "Manual",
       "fuelType": "Petrol",
@@ -166,7 +202,7 @@
       "type": "SUV",
       "price": 27000,
       "sellerCompany": "Auto Sales Express",
-      "images": ["/images/equinox.jpg", "/images/equinox.jpg", "/images/equinox.jpg", "/images/equinox.jpg"],
+      "images": ["/images/equinox.jpg", "/images/crv.jpg", "/images/tazz.jpg", "/images/altima.jpg"],
       "color": "White",
       "driveMode": "Automatic",
       "fuelType": "Petrol",
@@ -226,7 +262,7 @@
       "type": "SUV",
       "price": 32000,
       "sellerCompany": "Jeep Store",
-      "images": ["/images/cherokee.avif", "/images/cherokee.avif", "/images/cherokee.avif", "/images/cherokee.avif"],
+      "images": ["/images/cherokee.avif", "/images/cherokee.avif", "/images/lexus.jpg", "/images/cherokee.avif"],
       "color": "Green",
       "driveMode": "Automatic",
       "fuelType": "Diesel",
@@ -376,7 +412,7 @@
       "type": "Sedan",
       "price": 55000,
       "sellerCompany": "Mercedes Dealers",
-      "images": ["/images/cclass.jpeg", "/images/cclass.jpeg","/images/cclass.jpeg","/images/cclass.jpeg"],
+      "images": ["/images/cclass.jpeg", "/images/gmc.jpg","/images/cclass.jpeg","/images/acura.webp"],
       "color": "Black",
       "driveMode": "Automatic",
       "fuelType": "Petrol",
@@ -406,7 +442,7 @@
       "type": "Truck",
       "price": 42000,
       "sellerCompany": "GMC Dealership",
-      "images": ["/images/gmc.jpg", "/images/gmc.jpg", "/images/gmc.jpg", "/images/gmc.jpg"],
+      "images": ["/images/gmc.jpg", "/images/acura.webp", "/images/gmc.jpg", "/images/gmc.jpg"],
       "color": "Red",
       "driveMode": "Automatic",
       "fuelType": "Diesel",
@@ -607,5 +643,80 @@
       "remoteCentralLocking": "Standard",
       "tyrePressureSensor": "Standard"
     }
+  ],
+  "orders":[
+    {
+      
+    "id":1,
+    "name": "Sello Monama",
+    "contacts": "0867458794",
+    "email": "sellomonama@gmail.com",
+    "from": "2023-11-05",
+    "to": "2023-12-15",
+    "brand": "Toyota",
+    "model": "Camry",
+    "carId": 1
+  },  { 
+    "id":2,
+    "name": "Jabulani Masinga",
+    "contacts": "06774118787",
+    "email": "Jabulani5657@gmail.com",
+    "from": "2024-01-01",
+    "to": "2024-02-12",
+    "brand": "Toyota",
+    "model": "Camry",
+    "carId": 1
+  },  { 
+    "id":3,
+    "name": "Jumaima Mustio",
+    "contacts": "08976867867",
+    "email": "Jumaima67878@gmail.com",
+    "from": "2024-01-04",
+    "to": "2024-01-15",
+    "brand": "Kia",
+    "model": "Sportage",
+    "carId": 15
+  },  { 
+    "id":4,
+    "name": "Mulelo Zamani",
+    "contacts": "0759706977",
+    "email": "Mulelo9900@gmail.com",
+    "from": "2023-12-10",
+    "to": "2024-02-15",
+    "brand": "Chevrolet",
+    "model": "Equinox",
+    "carId": 5
+  },  { 
+    "id":5,
+    "name": "Gilbert Monama",
+    "contacts": "087697789",
+    "email": "Gilbert879@gmail.com",
+    "from": "2023-11-05",
+    "to": "2023-12-15",
+    "brand": "Volkswagen",
+    "model": "Jetta",
+    "carId": 6
+  },  { 
+    "id":6,
+    "name": "Keleytso Kambala",
+    "contacts": "0867458794",
+    "email": "Keleytso56456@gmail.com",
+    "from": "2024-01-05",
+    "to": "2024-02-09",
+    "brand": "Volkswagen",
+    "model": "Jetta",
+    "carId": 6
+  },  { 
+    "id":7,
+    "name": "Zaap Mondli",
+    "contacts": "0985769797",
+    "email": "Zaap@gmail.com",
+    "from": "2023-11-06",
+    "to": "2023-12-11",
+    "brand": "Acura",
+    "model": "MDC",
+    "carId": 19
+  }
+
   ]
 }

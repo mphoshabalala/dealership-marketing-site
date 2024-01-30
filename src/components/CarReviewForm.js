@@ -3,12 +3,15 @@ import React, { useState } from "react";
 
 import Input from "../components/Input";
 import axios from "axios";
+import Cancel from "./Cancel";
+import "animate.css";
 const BASE_URL = "";
 export default function CarReviewForm({
   carModel,
   carBrand,
   id,
   setModalOpen,
+  isModalOpen,
 }) {
   const [formError, setFormError] = useState(null);
   const [form, setForm] = useState({
@@ -64,16 +67,15 @@ export default function CarReviewForm({
   }
 
   return (
-    <div className=" h-full w-full fixed top-0 left-0 bg-opacity-50  font-bold text-gray-700 bg-black">
-      <div className="pt-24  md:m-40 h-full md:h-3/4 bg-white shadow-lg rounded md:p-8">
-        <div className="flex justify-end w-full">
-          <p
-            className="font-bold border rounded-lg p-4 cursor-pointer hover:bg-gray-200"
-            onClick={() => setModalOpen((prev) => !prev)}
-          >
-            X
-          </p>
-        </div>
+    <div
+      className={` h-full  md:block md:fixed top-0 left-0 bg-opacity-50 w-screen  font-bold text-gray-700 bg-black z-50     animate__animated ${
+        isModalOpen ? "animate__fadeIn" : "animate__fadeOut"
+      }
+"
+      } `}
+    >
+      <div className="pt-24   md:m-40 h-full md:h-3/4 bg-white shadow-lg rounded md:p-8">
+        <Cancel setModalOpen={setModalOpen} />
         <h1 className="text-2xl md:text-3xl text-center text-blue-600">
           Do you like this car? fill the form below to book for a car review
           with the dealer.

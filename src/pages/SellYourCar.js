@@ -1,134 +1,27 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../utilities/ScrollToTop";
 import Input from "../components/Input";
 import FileInput from "../components/FileInput";
 import SubmitButton from "../components/SubmitButton";
-import axios from "axios";
-import { convertToBase64 } from "../utilities/convertToBase64";
+import "animate.css";
+// import axios from "axios";
+// import { convertToBase64 } from "../utilities/Filestreams";
+import { useSellYourCar } from "../contexts/SellYourCarContext";
+// import FileDroppingUpload from "../components/FiledropingUpload";
 
-const BASE_URL = "";
+// const BASE_URL = "";
 
 export default function SellYourCar() {
-  const [form, setForm] = useState({
-    model: "",
-    brand: "",
-    dateOfPurchase: "",
-    mileage: "",
-    carType: "",
-    driveMode: "",
-    fuelType: "",
-    maxSpeed: "",
-    fullCarExteriorImg: "",
-    interiorDashboardImg: "",
-    interior1Img: "",
-    interior2Img: "",
-    engineImg: "",
-    yourIdImg: "",
-    carRegistrationImg: "",
-  });
-
-  // handle input change and update the setForm state
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prevForm) => ({ ...prevForm, [name]: value }));
-  };
-
-  //handle file change and convert to base 64 encoding
-  const handleFileChange = async (e, field) => {
-    const files = await e.target.files;
-    //check if theres a file
-    if (files && files.length > 0) {
-      // convert the file to base64 encoding
-      const base64 = await convertToBase64(files[0]);
-      console.log(base64);
-      // update the setForm state bny storing base64 file
-      setForm((prevForm) => ({ ...prevForm, [field]: base64 }));
-    }
-  };
-
-  const handleFormSubmit = async (e) => {
-    console.log(form);
-    e.preventDefault();
-    // instantiate formData object for holding formData datatype
-    const formData = new FormData();
-    // append actual data
-    formData.append("model", form.model);
-    formData.append("brand", form.brand);
-    formData.append("dateOfPurchase", form.dateOfPurchase);
-    formData.append("mileage", form.mileage);
-    formData.append("carType", form.carType);
-    formData.append("driveMode", form.driveMode);
-    formData.append("fuelType", form.fuelType);
-    formData.append("maxSpeed", form.maxSpeed);
-    // File fields
-    formData.append("fullCarExteriorImg", form.fullCarExteriorImg);
-    formData.append("interiorDahboardImg", form.interiorDahboardImg);
-    formData.append("interior1Img", form.interior1Img);
-    formData.append("interior2Img", form.interior2Img);
-    formData.append("engineImg", form.engineImg);
-    formData.append("yourIdImg", form.yourIdImg);
-    formData.append("carRegistrationImg", form.carRegistrationImg);
-
-    // Reset form after successful submission
-    setForm({
-      model: "",
-      brand: "",
-      dateOfPurchase: "",
-      mileage: "",
-      carType: "",
-      driveMode: "",
-      fuelType: "",
-      maxSpeed: "",
-      fullCarExteriorImg: "",
-      interiorDahboardImg: "",
-      interior1Img: "",
-      interior2Img: "",
-      engineImg: "",
-      yourIdImg: "",
-      carRegistrationImg: "",
-    });
-    try {
-      // install axios
-      const res = await axios.post(BASE_URL, formData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      // if (res.status !== 200) {
-      //   throw new Error("Failed to submit data");
-      // }
-
-      // Reset form
-      setForm({
-        model: "",
-        brand: "",
-        dateOfPurchase: "",
-        mileage: "",
-        carType: "",
-        driveMode: "",
-        fuelType: "",
-        maxSpeed: "",
-        fullCarExteriorImg: "",
-        interiorDahboardImg: "",
-        interior1Img: "",
-        interior2Img: "",
-        engineImg: "",
-        yourIdImg: "",
-        carRegistrationImg: "",
-      });
-    } catch (err) {
-      console.error("Error submiting data:", err.message);
-    }
-  };
+  const { form, handleFileChange, handleInputChange, handleFormSubmit } =
+    useSellYourCar();
 
   return (
     <>
       <ScrollToTop />
       <Header />
-      <div className="pt-24 w-full flex flex-col  items-center bg-gray-100 px-16">
+      <div className="pt-24 w-full flex flex-col  items-center bg-gray-100 px-16 animate__animated animate__fadeIn">
         <div className="block  border-spacing-4 border-red-400 border-b-4 md:border-b-8 mb-4 md:mb-8">
           <h1 className="text-3xl md:text-5xl font-Bebas text-gray-700">
             SELL YOUR CAR
@@ -138,13 +31,16 @@ export default function SellYourCar() {
           Let us help you sell your car to one of our professional deales.
         </p>
 
-        <form className="w-full flex flex-col " onSubmit={handleFormSubmit}>
+        <form
+          className="w-full flex flex-col items-center justify-center border"
+          onSubmit={handleFormSubmit}
+        >
           <div className="flex flex-col">
-            <div className="w-full flex justify-center items-center flex-col ">
+            <div className=" flex  flex-col ">
               <h1 className="text-2xl font-semibold md:font-bold text-gray-700">
                 Car Properties
               </h1>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col ">
                 <div className="flex-col ">
                   <Input
                     placeholder={"Model"}
@@ -209,35 +105,37 @@ export default function SellYourCar() {
                 </p>
               </div>
             </div>
-            <div className=" flex justify-center flex-col  items-center font-bold text-gray-700 ">
+            <div className=" flex  flex-col font-bold text-gray-700 ">
               <h1 className="text-2xl font-bold text-gray-700 mt-8">
                 Car Images
               </h1>
-              <div className="flex-col md:flex-row">
-                <div className="flex flex-col m-4">
-                  <p className="py-2">Full Exterior :</p>
-                  <FileInput
-                    type="file"
-                    name="interiorDahboardImg"
-                    accept="image/*"
-                    onChange={(e) => handleFileChange(e, "interiorDahboardImg")}
-                  />
-                </div>
-                <div className="flex flex-col m-4">
-                  <p className="py-2">Interior dashboard :</p>
-                  <FileInput type="file" name="image" accept="image/*" />
-                </div>
+              <div className="flex md:flex-row">
+                <FileInput
+                  labelText="Full Exterior"
+                  type="file"
+                  name="interiorDahboardImg"
+                  accept="image/*"
+                  onChange={(e) => handleFileChange(e, "interiorDahboardImg")}
+                />
+
+                <FileInput
+                  labelText="Interior dashboard"
+                  type="file"
+                  name="image"
+                  accept="image/*"
+                />
               </div>
-              <div className="md:flex-row flex-col m-4">
-                <p className="py-2">Two interior images :</p>
+              <div className="md:flex-row flex-col mt-8">
                 <div className="flex">
                   <FileInput
+                    labelText="Interior front seats"
                     type="file"
                     name="interior1Img"
                     accept="image/*"
                     onChange={(e) => handleFileChange(e, "interior1Img")}
                   />
                   <FileInput
+                    labelText="interior back seats"
                     type="file"
                     name="interior2Img"
                     accept="image/*"
@@ -245,7 +143,7 @@ export default function SellYourCar() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col m-4">
+              <div className="flex flex-col  border">
                 <p className="py-2">Engine :</p>
                 <FileInput
                   type="file"
@@ -283,7 +181,7 @@ export default function SellYourCar() {
               </div>
             </div>
           </div>
-          <div className="flex  justify-center">
+          <div className="flex  ">
             <SubmitButton />
           </div>
         </form>
