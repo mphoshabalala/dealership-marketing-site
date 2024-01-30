@@ -65,8 +65,8 @@ export default function Cars() {
           </div>
           <div className="flex flex-wrap">
             {displayCars.map((car) => (
-              // <Car key={car.id} car={car} /> from json-server
-              <Car key={car._id} car={car} />
+              <Car key={car.id} car={car} /> //from json-server
+              // <Car key={car._id} car={car} />
             ))}
           </div>
           <div>
