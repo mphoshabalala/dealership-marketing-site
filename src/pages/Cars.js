@@ -4,12 +4,10 @@ import Footer from "../components/Footer";
 import { useCars } from "../contexts/carsContext";
 import Car from "../components/Car";
 import ScrollToTop from "../utilities/ScrollToTop";
-import ReactPaginate from "react-paginate";
 import { useState } from "react";
-import { useHeader } from "../contexts/HeaderContext";
-import Menu from "../components/Menu";
 import NewsLetter from "../components/NewsLetter";
 import "animate.css";
+import Pagination from "../components/Pagination";
 
 export default function Cars() {
   const { cars, setOrderBy } = useCars();
@@ -40,7 +38,7 @@ export default function Cars() {
         </div>
         <div className="flex flex-col p-8 md:p-24 flex-wrap">
           <div className="flex items-center">
-            <p>SORT BY:</p>
+            <p>SORT:</p>
             <button
               onClick={() => setOrderBy("price")}
               className="m-2 px-2 md:px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
@@ -57,10 +55,10 @@ export default function Cars() {
               onClick={() => setOrderBy("created_at")}
               className="m-2 px-2 md:px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400"
             >
-              Recent Arival
+              Recent
             </button>
             <button className="m-2 px-2 md:px-4 bg-purple-500 text-gray-200 rounded-sm hover:bg-purple-400">
-              Older Arival
+              Older
             </button>
             <button
               onClick={() => setOrderBy("created_at")}
@@ -75,21 +73,10 @@ export default function Cars() {
               // <Car key={car._id} car={car} />
             ))}
           </div>
-          <div>
-            <ReactPaginate
-              className="flex"
-              previousLabel="Previous"
-              nextLabel="Next"
-              breakLabel="..."
-              pageCount={totalPages}
-              onPageChange={handlePageClick}
-              pageClassName="p-4 border-2 border-blue-500 border-l-0 hover:bg-blue-200"
-              previousClassName="p-4 border-2 border-blue-500 rounded-l-lg  bg-blue-300 hover:bg-blue-400"
-              nextClassName="p-4 border-2 border-l-0 border-blue-500 rounded-r-lg bg-blue-300 hover:bg-blue-400"
-              breakClassName="p-4 border-2 border-l-0 border-blue-500  hover:bg-blue-200"
-              activeClassName="bg-blue-400"
-            />
-          </div>
+          <Pagination
+            totalPages={totalPages}
+            handlePageClick={handlePageClick}
+          />
         </div>
       </div>
 

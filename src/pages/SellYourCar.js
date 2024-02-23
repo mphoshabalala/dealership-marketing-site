@@ -21,7 +21,7 @@ export default function SellYourCar() {
     <>
       <ScrollToTop />
       <Header />
-      <div className="pt-24 w-full flex flex-col  items-center bg-gray-100 px-16 animate__animated animate__fadeIn">
+      <div className="pt-32 w-full flex flex-col pb-24  items-center bg-gray-100 px-16 animate__animated animate__fadeIn">
         <div className="block  border-spacing-4 border-red-400 border-b-4 md:border-b-8 mb-4 md:mb-8">
           <h1 className="text-3xl md:text-5xl font-Bebas text-gray-700">
             SELL YOUR CAR
@@ -41,7 +41,7 @@ export default function SellYourCar() {
                 Car Properties
               </h1>
               <div className="flex flex-col ">
-                <div className="flex-col ">
+                <div className="flex flex-col md:flex-row">
                   <Input
                     placeholder={"Model"}
                     value={form.model}
@@ -57,21 +57,23 @@ export default function SellYourCar() {
                 </div>
                 <div className=" flex-col ">
                   <p className="text-green-600 pl-4">Date of purchase</p>
-                  <Input
-                    placeholder={"Year Of Purchase"}
-                    value={form.dateOfPurchase}
-                    onChange={handleInputChange}
-                    name="dateOfPurchase"
-                    type="date"
-                  />
-                  <Input
-                    placeholder={"Mileage"}
-                    value={form.mileage}
-                    onChange={handleInputChange}
-                    name="mileage"
-                  />
+                  <div className="flex flex-col md:flex-row">
+                    <Input
+                      placeholder={"Year Of Purchase"}
+                      value={form.dateOfPurchase}
+                      onChange={handleInputChange}
+                      name="dateOfPurchase"
+                      type="date"
+                    />
+                    <Input
+                      placeholder={"Mileage"}
+                      value={form.mileage}
+                      onChange={handleInputChange}
+                      name="mileage"
+                    />
+                  </div>
                 </div>
-                <div className="flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row">
                   <Input
                     placeholder={"Type, e.g. Sedan, SUV"}
                     value={form.carType}
@@ -85,7 +87,7 @@ export default function SellYourCar() {
                     name="driveMode"
                   />
                 </div>
-                <div className="flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row">
                   <Input
                     placeholder={"Fuel Type, e.g Petrol"}
                     value={form.fuelType}
@@ -99,7 +101,7 @@ export default function SellYourCar() {
                     name="maxSpeed"
                   />
                 </div>
-                <p className="text-red-600">
+                <p className="text-red-600 font-semibold">
                   Note: other features will be considerd after you have been
                   called for a review
                 </p>
@@ -109,7 +111,7 @@ export default function SellYourCar() {
               <h1 className="text-2xl font-bold text-gray-700 mt-8">
                 Car Images
               </h1>
-              <div className="flex md:flex-row">
+              <div className="flex flex-col md:flex-row">
                 <FileInput
                   labelText="Full Exterior"
                   type="file"
@@ -125,8 +127,8 @@ export default function SellYourCar() {
                   accept="image/*"
                 />
               </div>
-              <div className="md:flex-row flex-col mt-8">
-                <div className="flex">
+              <div className="flex flex-col md:flex-row  mt-8">
+                <div className="flex flex-col md:flex-row">
                   <FileInput
                     labelText="Interior front seats"
                     type="file"
@@ -148,7 +150,7 @@ export default function SellYourCar() {
                 <FileInput
                   type="file"
                   name="engineImg"
-                  accept="image/*"
+                  accept="image/*,.svg"
                   onChange={(e) => handleFileChange(e, "engineImg")}
                 />
               </div>
@@ -157,7 +159,7 @@ export default function SellYourCar() {
               <h1 className="text-2xl font-semibold md:font-bold text-gray-700 mt-8">
                 Your documents
               </h1>
-              <div className="flex">
+              <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col m-4">
                   <p className="py-2">certified ID copy(pdf) :</p>
                   <FileInput

@@ -8,7 +8,7 @@ export default function AboutUs() {
     <>
       <ScrollToTop />
       <Header />
-      <div className="pt-24 w-full flex flex-col  bg-heroImage bg-center bg-cover bg-no-repeat font-semibold items-center text-gray-800 px-16">
+      <div className="py-24 w-full flex flex-col  bg-heroImage bg-center bg-cover bg-no-repeat font-semibold items-center text-gray-800 px-16">
         <div className="block  border-spacing-4 border-red-400 border-b-4 md:border-b-8 mb-4 md:mb-8">
           <h1 className="text-3xl md:text-5xl font-Bebas text-gray-700">
             About Us

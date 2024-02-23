@@ -20,7 +20,11 @@ export default function ScrollUp() {
   }, []);
 
   return (
-    <a className="p-4 rounded-lg bg-blue-600" href="#up" style={showIcon}>
+    <a
+      className="p-2 md:p-4 rounded-sm md:rounded-lg bg-blue-600"
+      href="#up"
+      style={showIcon}
+    >
       <img src={up} alt="" />
     </a>
   );

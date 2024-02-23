@@ -18,7 +18,7 @@ export default function Homepage() {
       <Header />
       <NewsLetter />
       <Hero rightArrow={rightArrow} />
-      <CalculateCarValue rightArrow={rightArrow} />
+      {/* <CalculateCarValue rightArrow={rightArrow} /> */}
       <CarsSection rightArrow={rightArrow} />
       <DealersSection rightArrow={rightArrow} />
       <SellYourCarSection rightArrow={rightArrow} />

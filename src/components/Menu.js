@@ -12,13 +12,25 @@ export default function Menu({ setIsMenubarOpen }) {
       </button>
       <ul className="flex h-full items-center flex-col justify-center ">
         <li className="mb-8">
-          <Link to="/cars">Buy Car</Link>
+          <Link onClick={() => setIsMenubarOpen((prev) => !prev)} to="/cars">
+            Buy Car
+          </Link>
         </li>
         <li className="mb-8">
-          <Link to="/sell-your-car">Sell Car</Link>
+          <Link
+            onClick={() => setIsMenubarOpen((prev) => !prev)}
+            to="/sell-your-car"
+          >
+            Sell Car
+          </Link>
         </li>
         <li className="mb-8">
-          <Link to="/dealers">Dealers </Link>
+          <Link
+            onClick={() => setIsMenubarOpen((prev) => !prev)}
+            to="/account/login"
+          >
+            Account
+          </Link>
         </li>
       </ul>
     </div>

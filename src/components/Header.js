@@ -22,12 +22,16 @@ export default function Header() {
           <div>
             <ul className="hidden md:block">
               <li>
-                <Link to="/cars" className="mr-4 hover:text-blue-200" href="#">
+                <Link
+                  to="/cars"
+                  className="mr-4 hover:text-blue-200 transition-all"
+                  href="#"
+                >
                   BUY CAR
                 </Link>
                 <Link
                   to="/sell-your-car"
-                  className="mr-4 hover:text-blue-200"
+                  className="mr-4 hover:text-blue-200 transition-all"
                   href="#"
                 >
                   SELL CAR
@@ -36,8 +40,13 @@ export default function Header() {
                 {/* <Link to="/dealers" className="hover:text-blue-200 mr-4">
                   DEALERS
                 </Link> */}
-                <Link className="hover:text-blue-200 mr-4">BLOGS</Link>
-                <Link to="/account/login" className=" hover:text-blue-200">
+                <Link className="hover:text-blue-200 mr-4 transition-all">
+                  BLOGS
+                </Link>
+                <Link
+                  to="/account/login"
+                  className=" hover:text-blue-200 transition-all"
+                >
                   ACCOUNT
                 </Link>
               </li>

@@ -51,7 +51,7 @@ export default function DetailedCar() {
       <Header />
       <NewsLetter />
       <div
-        className="pt-24 relative w-full flex flex-col  items-center bg-gray-100 text-gray-800    animate__animated animate__fadeIn 
+        className="py-24 relative w-full flex flex-col  items-center bg-gray-100 text-gray-800    animate__animated animate__fadeIn 
 "
       >
         <div className="block  border-spacing-4 border-red-400 border-b-8 md:mb-16">

@@ -37,6 +37,7 @@ function SellYourCarProvider({ children }) {
     //check if theres a file
     if (files && files.length > 0) {
       // convert the file to base64 encoding
+      console.log(files[0]);
       const base64 = await convertToBase64(files[0]);
       console.log(base64);
       // update the setForm state bny storing base64 file
