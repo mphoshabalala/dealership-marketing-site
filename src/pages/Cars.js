@@ -6,10 +6,15 @@ import Car from "../components/Car";
 import ScrollToTop from "../utilities/ScrollToTop";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
+import { useHeader } from "../contexts/HeaderContext";
+import Menu from "../components/Menu";
+import NewsLetter from "../components/NewsLetter";
+import "animate.css";
 
 export default function Cars() {
   const { cars, setOrderBy } = useCars();
   const [currPage, setCurrPage] = useState(0);
+
   const itemsPerPage = 6;
   const totalNumCars = cars.length;
   const totalPages = Math.ceil(totalNumCars / itemsPerPage);
@@ -28,7 +33,8 @@ export default function Cars() {
     <>
       <ScrollToTop />
       <Header />
-      <div className="w-full py-32 pt-16 flex justify-center items-center flex-col bg-gray-100 text-gray-700">
+      <NewsLetter />
+      <div className="w-full py-32 pt-16 flex justify-center items-center flex-col bg-gray-100 text-gray-700 animate__animated animate__fadeIn ">
         <div className="block  border-spacing-4 border-red-400 border-b-8 mt-16 ">
           <h1 className="text-5xl font-Bebas">OUR CARS</h1>
         </div>

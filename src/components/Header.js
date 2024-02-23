@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import facebook from "../images/facebook.png";
 import x from "../images/twitter.png";
@@ -6,16 +5,15 @@ import instagram from "../images/instagram.png";
 import tiktok from "../images/tiktok.png";
 import menu from "../images/hamburger.png";
 import Menu from "./Menu";
+import ScrollUp from "./ScrollUp";
+import { useHeader } from "../contexts/HeaderContext";
 
 export default function Header() {
-  const [isMenuBarOpen, setIsMenubarOpen] = useState(false);
+  const { isMenuBarOpen, setIsMenubarOpen, handleMenu } = useHeader();
 
-  function handleMenu() {
-    setIsMenubarOpen((prev) => !prev);
-  }
   return (
     <>
-      <header className="w-screen px-8 md:w-full md:px-16 py-4 flex items-center text-gray-700 justify-center bg-blue-400 font-semibold fixed top-0 left-0 border-b-4 border-b-red-400 z-10">
+      <header className="w-screen px-8 md:w-full md:px-16 py-4 flex items-center text-gray-700 justify-center bg-blue-400 h-24 font-semibold fixed top-0 left-0 border-b-4 border-b-red-400 z-20">
         <div className="container flex justify-between items-center">
           <Link to="/">
             <h1 className="md:text-3xl">ECOWHEELS</h1>
@@ -35,8 +33,12 @@ export default function Header() {
                   SELL CAR
                 </Link>
 
-                <Link to="/dealers" className="hover:text-blue-200">
+                {/* <Link to="/dealers" className="hover:text-blue-200 mr-4">
                   DEALERS
+                </Link> */}
+                <Link className="hover:text-blue-200 mr-4">BLOGS</Link>
+                <Link to="/account/login" className=" hover:text-blue-200">
+                  ACCOUNT
                 </Link>
               </li>
             </ul>
@@ -80,6 +82,9 @@ export default function Header() {
             </a>
           </li>
         </ul>
+      </div>
+      <div className="fixed right-16 bottom-16">
+        <ScrollUp />
       </div>
 
       {isMenuBarOpen && <Menu setIsMenubarOpen={setIsMenubarOpen} />}

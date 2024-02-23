@@ -9,11 +9,14 @@ import ScrollToTop from "../utilities/ScrollToTop";
 import BecomeADealer from "../components/BecomeADealer";
 import rightArrow from "../images/rightArrow.png";
 import CalculateCarValue from "../components/CalculateCarValue";
+import NewsLetter from "../components/NewsLetter";
+import "animate.css";
 export default function Homepage() {
   return (
-    <div className="text-gray-900 bg-gray-100">
+    <div className="text-gray-900 bg-gray-100 animate__animated animate__fadeIn">
       <ScrollToTop />
       <Header />
+      <NewsLetter />
       <Hero rightArrow={rightArrow} />
       <CalculateCarValue rightArrow={rightArrow} />
       <CarsSection rightArrow={rightArrow} />

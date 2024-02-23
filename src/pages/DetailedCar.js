@@ -24,9 +24,13 @@ import ScrollToTop from "../utilities/ScrollToTop";
 import CarReviewForm from "../components/CarReviewForm";
 import CarPropertyItem from "../components/CarPropertyItem";
 import SubmitButton from "../components/SubmitButton";
+import MobileCarReviewForm from "../components/MobileCarReviewForm";
+import NewsLetter from "../components/NewsLetter";
+import "animate.css";
 
 export default function DetailedCar() {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [carImgIndex, setCarImgIndex] = useState(0);
   const location = useLocation();
   const carId = location.pathname.replace("/cars/", "").toString();
   const { getCar, isLoading, error, currentCar } = useCars();
@@ -45,20 +49,47 @@ export default function DetailedCar() {
     <>
       <ScrollToTop />
       <Header />
-      <div className="pt-24 relative w-full flex flex-col  items-center bg-gray-100 text-gray-800">
+      <NewsLetter />
+      <div
+        className="pt-24 relative w-full flex flex-col  items-center bg-gray-100 text-gray-800    animate__animated animate__fadeIn 
+"
+      >
         <div className="block  border-spacing-4 border-red-400 border-b-8 md:mb-16">
           <h1 className="text-2xl md:text-5xl font-Bebas">
             {currentCar.brand} {currentCar.model}
           </h1>
         </div>
-        <div className="w-full px-8 md:px-24 py-8 flex flex-col md:flex-row">
+        <div className="w-full px-8 md:px-24 py-8 flex flex-col md:flex-row ">
           {currentCar.images ? (
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <img src={currentCar.images[0]} alt="" />
+            <div className="w-full md:w-1/2 mb-8 md:mb-0 flex">
+              <div className="flex w-5/6 h-full z-10">
+                <button
+                  onClick={() => setCarImgIndex((i) => i - 1)}
+                  className={`p-2 bg-red-700   text-2xl text-white font-extrabold ${
+                    carImgIndex === 0 ? "bg-opacity-40" : "bg-opacity-90"
+                  }`}
+                  disabled={carImgIndex === 0}
+                >
+                  {"<"}
+                </button>
+                <img src={currentCar.images[carImgIndex]} alt="" />
+                <button
+                  onClick={() => setCarImgIndex((i) => i + 1)}
+                  className={`p-2   bg-red-700   text-2xl text-white font-extrabold ${
+                    carImgIndex === currentCar.images.length - 1
+                      ? "bg-opacity-40"
+                      : "bg-opacity-90"
+                  }`}
+                  disabled={carImgIndex === currentCar.images.length - 1}
+                >
+                  {">"}
+                </button>
+              </div>
             </div>
           ) : (
             <div>Image Loading</div>
           )}
+
           <div className="w-full md:w-1/2 bg-white">
             <h1 className="px-4 font-bold font-Bebas text-4xl">
               R{currentCar.price}
@@ -184,12 +215,21 @@ export default function DetailedCar() {
       </div>
 
       {isModalOpen && (
-        <CarReviewForm
-          setModalOpen={setModalOpen}
-          carModel={currentCar.model}
-          carBrand={currentCar.brand}
-          id={carId}
-        />
+        <>
+          <CarReviewForm
+            setModalOpen={setModalOpen}
+            carModel={currentCar.model}
+            carBrand={currentCar.brand}
+            isModalOpen={isModalOpen}
+            id={carId}
+          />
+          <MobileCarReviewForm
+            setModalOpen={setModalOpen}
+            carModel={currentCar.model}
+            carBrand={currentCar.brand}
+            id={carId}
+          />
+        </>
       )}
       <Footer />
     </>

@@ -6,7 +6,7 @@ import SubmitButton from "../components/SubmitButton";
 import ScrollToTop from "../utilities/ScrollToTop";
 import axios from "axios";
 import FileInput from "../components/FileInput";
-import { convertToBase64 } from "../utilities/convertToBase64";
+import { convertToBase64 } from "../utilities/Filestreams";
 import TextArea from "../components/TextArea";
 
 const BASE_URL = "";

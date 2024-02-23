@@ -3,7 +3,7 @@ import cancel from "../images/cancel.png";
 
 export default function Menu({ setIsMenubarOpen }) {
   return (
-    <div className="w-full md:hidden flex justify-center flex-col text-gray-700 font-semibold  h-full  fixed top-0 left-0 bg-gray-100 bg-opacity-80 ">
+    <div className="w-full md:hidden flex justify-center flex-col text-gray-700 font-semibold  h-full  fixed top-0 left-0 bg-gray-100 bg-opacity-80 z-20">
       <button
         className=" block ml-auto m-4 mr-8"
         onClick={() => setIsMenubarOpen((prev) => !prev)}

@@ -55,6 +55,7 @@ function CarsProvier({ children }) {
       if (error) console.log("Error", error);
     } catch {
       setError(error);
+      setIsLoading(false);
     } finally {
       setIsLoading(false);
     }

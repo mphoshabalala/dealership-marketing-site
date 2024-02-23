@@ -5,9 +5,12 @@ import CallToActionButton from "./CallToActionButton";
 
 export default function Hero({ rightArrow }) {
   return (
-    <div className="flex flex-col-reverse h-screen w-full md:flex-row items-center justify-center bg-heroImage bg-center bg-cover bg-no-repeat bg-blue-100 px-4 py-40 md:px-16 md:py-20">
+    <div
+      id="hero"
+      className="flex flex-col-reverse h-screen w-full md:flex-row items-center justify-center bg-heroImage bg-center bg-cover bg-no-repeat bg-blue-100 px-4 py-40 md:px-16 md:py-20"
+    >
       <div className=" w-full md:w-1/3 h-full items-center  flex flex-col  justify-center md:items-start">
-        <h1 className="font-Bebas text-center text-3xl md:text-start md:text-7xl">
+        <h1 className="font-Bebas text-center text-3xl md:text-start md:text-6xl">
           BUY FROM ECOWHEELS, WHERE QUALITY MEETS AFFORDABILITY
         </h1>
         <p className="font-semibold md:text-2xl text-gray-500">
